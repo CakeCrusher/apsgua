@@ -1,0 +1,474 @@
+{% extends 'homePage.html' %}
+{% load static from staticfiles %}
+{% block addTitle %}
+LibroInteractivo
+{% endblock %}
+{% block addCss %}
+<link rel="stylesheet" href="{% static 'css/libroInt_aa.css' %}">
+{% endblock %}
+{% block addContent %}
+<div id="load">
+  <div class="row row_adj">
+    <div class="loading">DESCARGANDO...</div>
+    <div style="animation: hovering 4s linear 2.5s infinite;" class="loading">DESCARGANDO...</div>
+  </div>
+</div>
+<div id="main">
+  <div class="row row_libroInt_adj">
+    <div class="page-container">
+      <div class="push_down-small"></div>
+      <div class="general-title">El Acuerdo de Paris en Resumen</div>
+      <hr>
+      <div class="push_down-small"></div>
+      <div class="general-title" id="preambulo">Pre&aacute;mbulo</div>
+      <div class="push_down-small"></div>
+      <div class="body-text">
+        <p>&nbsp; &nbsp;El pre&aacute;mbulo del Acuerdo de Par&iacute;s constituye el esp&iacute;ritu y los principios que lo orientan.<br />En el pre&aacute;mbulo se reconoce que el cambio clim&aacute;tico es un problema de toda la humanidad y que, al tomar medidas para hacerle frente, se deber&aacute;n respetar, promover y tener en cuenta las obligaciones relativas a los derechos&nbsp;&nbsp;humanos, el derecho a la salud, los derechos de los pueblos ind&iacute;genas, las comunidades locales, los migrantes, los ni&ntilde;os, las personas con discapacidad y las personas en situaciones vulnerables y el derecho al desarrollo, as&iacute; como la igualdad de g&eacute;nero, el empoderamiento de la mujer y la equidad intergeneracional.<br />En esta secci&oacute;n se resalta con grave preocupaci&oacute;n la necesidad urgente de alcanzar las trayectorias de emisiones de Gases de Efecto Invernadero necesarias para poder lograr que el aumento de la temperatura media del planeta se mantenga muy por debajo de los 2oC con respecto a los niveles de temperatura antes de la revoluci&oacute;n industrial, y de seguir esforz&aacute;ndose porque este aumento de la temperatura no sobrepase los 1,5 oC.<br />Se reconoce la necesidad de una respuesta progresiva y eficaz a la amenaza del cambio clim&aacute;tico teniendo en cuenta las necesidades espec&iacute;ficas y las circunstancias especiales de los pa&iacute;ses en desarrollo, sobre todo de los que son particularmente vulnerables a los efectos del cambio clim&aacute;tico. Se reconoce la necesidad de reforzar los conocimientos, las tecnolog&iacute;as, las pr&aacute;cticas y los esfuerzos de las comunidades locales y los pueblos ind&iacute;genas en relaci&oacute;n con la lucha contra el cambio clim&aacute;tico y la adopci&oacute;n de medidas de respuesta.</p>
+      </div>
+      <div class="push_down-small"></div>
+      <div style="color:#D4AF37" class="general-title" id="objetivo">Objetivo del Acuerdo  de Par&iacute;s</div>
+      <div class="body-text">
+        <p style="color:#CFB53B;font-size:1.5vw">&nbsp; &nbsp;Reforzar la respuesta del planeta a la amenaza de los efectos del Cambio Clim&aacute;tico en el contexto del Desarrollo Sostenible y de los esfuerzos por erradicar la pobreza.</p>
+      </div>
+      <div class="push_down-small"></div>
+      <div class="general-title" id="pilares">Los Pilares para Lograr este Objetivo</div>
+      <div class="push_down-small"></div>
+      <div style="color:white" class="row row_adj">
+        <div style="background-color:#D7CD5C; margin-left: 2vw" class="pilares">
+          <div class="med_text">Mitigaci&oacute;n</div>
+          <img style="width:50%;margin-left:25%" src="{% static 'images/mitigacion.png' %}" alt="">
+          <div style="width:90%" class="body-text">
+            <p>&nbsp; &nbsp;Reducir las emisiones de GEI para mantener el aumento de la temperatura media mundial muy por debajo de 2 oC con respecto a los niveles preindustriales, y esforzarse para limitar ese aumento de la temperatura a 1.5 oC con respecto a los niveles preindustriales.</p>
+          </div>
+        </div>
+        <div style="background-color:#94C145" class="pilares">
+          <div class="med_text">Adaptaci&oacute;n</div>
+          <img style="width:50%;margin-left:25%" src="{% static 'images/adaptacion.png' %}" alt="">
+          <div style="width:90%" class="body-text">
+            <p>&nbsp; &nbsp; Aumentar la capacidad del planeta de adaptarse a los efectos negativos del cambio  clim&aacute;tico y promover la resiliencia al clima y un desarrollo con bajas emisiones de gases de efecto invernadero, de un modo que no comprometa la producci&oacute;n de alimentos.</p>
+          </div>
+        </div>
+        <div style="background-color:#D3A350" class="pilares">
+          <div class="med_text">Financiamiento</div>
+          <img style="width:50%;margin-left:25%" src="{% static 'images/financiamiento.png' %}" alt="">
+          <div style="width:90%" class="body-text">
+            <p>&nbsp; &nbsp; El compromiso establecido por los pa&iacute;ses desarrollados es alcanzar la meta de $ 100 mil millones para combatir el Cambio Clim&aacute;tico para el a&ntilde;o 2020.</p>
+          </div>
+        </div>
+      </div>
+      <div class="push_down-small"></div>
+      <div class="body-text">
+        “El Acuerdo se aplicará para reflejar la equidad y el principio de las responsabilidades comunes pero diferenciadas y las capacidades respectivas, teniendo en cuenta las diferentes circunstancias nacionales.”
+      </div>
+      <div class="push_down-small"></div>
+      <div style="color:#D7CD5C" class="general-title" id="mitigacion">Mitigaci&oacute;n</div>
+      <div class="push_down-small"></div>
+      <div class="body-text">
+        <p>&nbsp; &nbsp;Con el objetivo de mitigar (reducir/ disminuir) las emisiones de Gases de Efecto Invernadero (GEI), cada pa&iacute;s/parte que aprob&oacute; el Acuerdo, present&oacute; su compromiso a trav&eacute;s de una &ldquo;Contribuci&oacute;n Determinada a Nivel Nacional (CDN)&rdquo; en la que define su obligaci&oacute;n como pa&iacute;s de reducci&oacute;n de emisiones y c&oacute;mo y en qu&eacute; actividades productivas podr&iacute;a reducir sus emisiones gases contaminantes a la atm&oacute;sfera. Los CDNs son la columna vertebral del Acuerdo de Par&iacute;s, estos responden al nivel de compromiso y voluntad de cada pa&iacute;s en cuanto a las acciones que van a tomar tanto en mitigaci&oacute;n como en adaptaci&oacute;n. Estos deber&aacute;n ser revisados y actualizados cada cinco a&ntilde;os, aumentando la ambici&oacute;n de reducci&oacute;n de emisiones en cada actualizaci&oacute;n para contribuir a alcanzar la meta establecida.</p>
+      </div>
+      <div class="med-text">CDN-Guatemala</div>
+      <div class="body-text">
+        <p>&nbsp; &nbsp;Guatemala present&oacute; su CDN a la CMNUCC en el a&ntilde;o 2015 aprobada por el Consejo Nacional de Cambio Clim&aacute;tico.</p>
+      </div>
+      <div class="row row_adj">
+        <div style="width:50%">
+          <div class="med-text">Compromisos de Guatemala:</div>
+          <div class="body-text">
+            <ul>
+              <li><p><strong>No Condicionado</strong> &ndash; Reducir en un 11.2% sus emisiones de GEI para el a&ntilde;o 2030, tomando como base las emisiones del a&ntilde;o 2005.</p></li>
+              <li><p><strong>Condicionada</strong> - Reducir en un 22.6% sus emisiones de GEI para el a&ntilde;o 2030, tomando como base las emisiones del a&ntilde;o 2005, condicionado a recibir el apoyo t&eacute;cnico y financiero necesario proveniente de recursos internacionales p&uacute;blicos y privados.</p></li>
+            </ul>
+            <div class="push_down-small"></div>
+            <p><i>&nbsp; &nbsp; <span style="color:#CF6C0C">La l&iacute;nea anaranjada de la gr&aacute;fica representa las emisiones de GEI del pa&iacute;s de Guatemala para el a&ntilde;o 2030 si continuamos con la tendencia de emisi&oacute;n actual.</span> <span style="color:#949393">La l&iacute;nea gris, representa las emisiones para el 2030, si se logra la meta de reducir el 11.2%,</span> <span style="color:#6B8B2E">y por &uacute;ltimo la l&iacute;nea verde representa las emisiones si se logra la meta condicionada de reducir el 22.6%.</span></i></p>
+          </div>
+        </div>
+        <img style="width:50%;height:26vw;margin-top:2vw;" src="{% static 'images/condicionado_graph.PNG' %}" alt="">
+      </div>
+      <div class="push_down-small"></div>
+      <div style="width:70%;margin-left:15%;" class="general-title">Emissiones de Gasses de Effecto Invernadero en Guatemala</div>
+      <div class="push_down-small"></div>
+      <div class="med-text">Total:43,590Gg</div>
+      <img style="width:50%;margin-left:25%" src="{% static 'images/emissiones-whole.PNG' %}" alt="">
+      <div class="push_down-small"></div>
+      <div class="body-text">
+        <p style="font-size:1.2vw">&nbsp; &nbsp;Para lograr las metas presentadas en la CDN de Guatemala, el pa&iacute;s identific&oacute; 5 sectores prioritarios para reducir las emisiones de GEI:</p>
+      </div>
+      <div style="width: 90%; margin-left: 5%;" class="row row_adj">
+        <div style="border-color:#D5DD3B;border-top-left-radius:3vw;border-bottom-left-radius:3vw;" class="sectores">
+          <div style="color:#D5DD3B;font-weight:bold" class="med-text">Processos Industriales</div>
+          <img style="width:90%;margin-left:5%;margin-top:1vw" src="{% static 'images/proInd-icon.PNG' %}" alt="">
+        </div>
+        <div style="border-color:#86D94C" class="sectores">
+          <div style="color:#86D94C;font-weight:bold" class="med-text">Energ&iacute;a</div>
+          <img style="width:50%;margin-left:25%" src="{% static 'images/energia-icon.PNG' %}" alt="">
+        </div>
+        <div style="border-color:#E1853C" class="sectores">
+          <div style="color:#E1853C;font-weight:bold" class="med-text">Residuos</div>
+          <img style="width:75%;margin-left:12.5%" src="{% static 'images/residuos-icon.PNG' %}" alt="">
+        </div>
+        <div style="border-color:#40CBE8" class="sectores">
+          <div style="color:#40CBE8;font-weight:bold" class="med-text">Bosques USCUSS</div>
+          <img style="width:55%;margin-left:22.5%" src="{% static 'images/bosques-icon.PNG' %}" alt="">
+        </div>
+        <div style="border-color:#3C41E1;border-top-right-radius:3vw;border-bottom-right-radius:3vw" class="sectores">
+          <div style="color:#3C41E1;font-weight:bold" class="med-text">Agricultura</div>
+          <img style="width:90%;margin-left:4%;margin-top:1.5vw" src="{% static 'images/agricultura-icon.PNG' %}" alt="">
+        </div>
+      </div>
+      <div class="push_down-small"></div>
+      <div class="row row_adj">
+        <img style="width:3%;height:4vw;margin-left:auto" src="{% static 'images/energia-icon.PNG' %}" alt="">
+        <div style="margin-right:auto;color:#86D94C" class="general-title" id="energia">Energ&iacute;a</div>
+      </div>
+      <div class="body-text">
+        <p>&nbsp; &nbsp; El sector de energ&iacute;a para Guatemala que representa el 28% de las emisiones nacionales abarca todas las emisiones de gases debido a la quema de combustibles f&oacute;siles. Las dos actividades principales que contribuyen a este sector son la producci&oacute;n de energ&iacute;a el&eacute;ctrica con 23% y el transporte con 49%, el restante 28% est&aacute; dividido entre quema de combustibles f&oacute;siles en comercios, casas, instituciones e industrias.<br />En Guatemala para el per&iacute;odo 2012- 2016 en promedio el 66% de la energ&iacute;a el&eacute;ctrica se gener&oacute; con recursos renovables, principalmente mediante recursos h&iacute;dricos, e&oacute;licos, geot&eacute;rmicos, solares, y biomasa. El 34% restante de la energ&iacute;a el&eacute;ctrica se gener&oacute; con carb&oacute;n, bunker, di&eacute;sel y gas.<br />De acuerdo al CDN de Guatemala se espera que para el a&ntilde;o 2030, 80% de la generaci&oacute;n de energ&iacute;a el&eacute;ctrica sea de fuentes renovables.<br />En el pa&iacute;s existen ya instrumentos, pol&iacute;ticas, instituciones y proyectos que ser&aacute;n de apoyo para alcanzar la aspiraci&oacute;n del pa&iacute;s para la efectiva reducci&oacute;n de emisiones de GEI en este sector, algunas de estas son:</p>
+        <div class="row row_adj">
+          <ul style="width:40%">
+            <li><p>Pol&iacute;tica Energ&eacute;tica 2012-2023 del Ministerio de Energ&iacute;a y Minas.</p></li>
+            <li><p>Ley de Incentivos para el desarrollo de proyectos de Energ&iacute;a Renovable (Decreto 52-2003).</p></li>
+            <li>Norma técnica para la conexión, operación, control y comercialización de la generación distribuida renovable.</li>
+            <li><p>Plan Nacional de Energ&iacute;a estipulado en el Art&iacute;culo 18 de la Ley Marco de Cambio Clim&aacute;tico (Decreto 7-2013).</p></li>
+          </ul>
+          <div style="width:60%">
+            <img style="width:90%;border-radius:2vw;margin-left:10%;margin-top:2vw" src="{% static 'images/electricity-towers.jpg' %}" alt="">
+          </div>
+        </div>
+        <p>En el subsector transporte, se trabaja en la implementaci&oacute;n y mejora del sistema transmetro, adem&aacute;s, se impulsar&aacute; una normativa para establecer un programa de incentivos fiscales y subsidios enfocados en el uso de energ&iacute;as limpias para el transporte p&uacute;blico y privado, incluyendo normativa para regular las emisiones de GEI en el transporte p&uacute;blico colectivo e individual.</p>
+        <div class="row row_adj">
+          <div style="width: 50%">
+            <img style="width: 90%; margin-left: 5%; border-radius: 2vw;" src="{% static 'images/parque.jpg' %}">
+          </div>
+          <div style="width: 50%">
+            <img style="width: 90%; margin-left: 5%; border-radius: 2vw;" src="{% static 'images/parque2.jpg' %}">
+          </div>
+        </div>
+        <p style="text-align: center"><i>Parque solar Horus, parque más grande de Centroamérica, Santa Rosa, Guatemala.</i></p>
+        <div class="push_down-small"></div>
+        <div style="color:#86D94C" class="med-text">Reducir el consumo de energía</div>
+        <div class="push_down-small"></div>
+        <div style="color:#86D94C" class="med-text">En la casa:</div>
+        <div style="height: 40vw; width: 80%; margin-left: 10%; background-size: 40vw;background-image: url('/static/images/casa_cosas.PNG');border-color: #86D94C" class="cosas"></div>        
+        <div style="margin-top: 2vw; height: 40vw; width: 80%; margin-left: 10%; background-size: 40vw;background-image: url('/static/images/casa-cosas-2.PNG');border-color: #86D94C" class="cosas"></div>
+        <div class="push_down-small"></div>
+        <div style="color:#86D94C" class="med-text">A través del transporte:</div>
+        <div style="width: 90%; margin-left: 5%; background-size: 40vw;background-image: url('/static/images/transporte-cosas.png');border-color: #86D94C" class="cosas"></div>
+      </div>
+      <div class="push_down-small"></div>
+      <div style="color:#86D94C" class="med-text">Entrvista: Diego Donis</div>
+      <iframe class="video" src="https://www.youtube.com/embed/ffmoziYAjag"></iframe>
+      <div class="push_down-small"></div>
+      <div class="row row_adj">
+        <img style="width:4%;height:4vw;margin-left:auto" src="{% static 'images/bosques-icon.PNG' %}" alt="">
+        <div style="margin-right:auto;color:#40CBE8" class="general-title" id="bosques">Bosques USCUSS</div>
+      </div>
+      <div class="push_down-small"></div>
+      
+      <div class="body-text">
+        <div class="row row_adj">
+          <div style="width: 50%">
+            <p>&nbsp; &nbsp; Las emisiones del sector de Uso de la tierra, Cambio en el uso de la tierra y Silvicultura (USCUSS) se refiere a las emisiones de Gases de Efecto Invernadero resultado de actividades inducidas por el ser humano en los sistemas forestales como deforestaci&oacute;n, degradaci&oacute;n e incendios. El uso de la tierra y la silvicultura est&aacute;n estrechamente relacionados con el lugar donde habitan las personas, su modo de vida y la forma en que se sustentan ya que un gran porcentaje de la deforestaci&oacute;n es causada para adquirir le&ntilde;a, o terreno para actividades ganaderas y agr&iacute;colas.</p>
+          </div>
+          <div style="width: 50%">
+            <img style="width: 90%;margin-left: 5%;border-radius: 1vw;margin-top: 1.5vw;" src="{% static 'images/bosque-spread.jpg' %}">
+          </div>
+        </div>
+        
+        <p>A nivel mundial el sector USCUSS representa aproximadamente el 20% de las emisiones de GEI, sin embargo, en Latinoam&eacute;rica este sector es el que m&aacute;s contribuye a las emisiones representando alrededor del 46% del total.7 En el caso de Guatemala, el sector USCUSS representa el 19% de las emisiones nacionales.</p>
+        <p>El Acuerdo de Par&iacute;s en su Art&iacute;culo 5, pide a los pa&iacute;ses Adoptar medidas para conservar y aumentar, seg&uacute;n corresponda, los sumideros y dep&oacute;sitos de todos los gases de efecto invernadero no controlados por el Protocolo de Montreal, inclusive la biomasa, los bosques y los oc&eacute;anos, as&iacute; como otros ecosistemas terrestres, costeros y marinos.</p>
+        <p>Guatemala ya cuenta con un Sistema Guatemalteco de &Aacute;reas Protegidas (SIGAP), que abarca el 33% del territorio nacional.</p>
+        <p>Algunos instrumentos y proyectos que ser&aacute;n de apoyo para alcanzar la aspiraci&oacute;n del pa&iacute;s en este sector son:</p>
+        <div class="row row_adj">
+          <ul style="width: 50%;">
+            <li><p>Implementaci&oacute;n de la Estrategia de Reducci&oacute;n de Emisiones por Deforestaci&oacute;n y Degradaci&oacute;n Evitada -REDD+-: actualmente se encuentra en desarrollo acopl&aacute;ndose a una visi&oacute;n de mejora e integraci&oacute;n a los instrumentos de pol&iacute;tica p&uacute;blica en el sector forestal.</p></li>
+            <li><p>Implementaci&oacute;n de Proyectos REDD+.</p></li>
+            <li><p>Implementaci&oacute;n de las Agendas de Cambio Clim&aacute;tico de las instituciones p&uacute;blicas relacionadas 7 CEPAL (2012) Bosques USCUSS ACUERDO DE PAR&Iacute;S: Un Acuerdo&nbsp; Ambicioso al cumplimiento del Art. 20, de la Ley Marco de Cambio Clim&aacute;tico principalmente con la Implementaci&oacute;n de la Estrategia de Biodiversidad y Cambio Clim&aacute;tico.</p></li>
+            <li><p>Fortalecimiento del Sistema Nacional de Prevenci&oacute;n y Control de Incendios Forestales -SIPECIF-.</p></li>
+            <li><p>Continuidad de la implementaci&oacute;n y cumplimiento de instrumentos de pol&iacute;tica de gesti&oacute;n forestal en la que resaltan: la nueva Ley de Fomento al Establecimiento, Recuperaci&oacute;n, Restauraci&oacute;n, Manejo, Producci&oacute;n y Protecci&oacute;n de Bosques de Guatemala -PROBOSQUE, Decreto 02-2015-, el Programa de Incentivos Forestales -PINFOR- y Programa de Incentivos Forestales para Poseedores de Peque&ntilde;as Extensiones de Tierra de Vocaci&oacute;n Forestal o Agroforestal -PINPEP-, Estrategia Nacional de Restauraci&oacute;n del Paisaje Forestal con una meta de 1.2 millones de hect&aacute;reas, la Estrategia de V&iacute;nculo entre Bosque Industria y Mercado y la Estrategia Nacional para el Combate de la Tala Ilegal.</p></li>
+          </ul>
+          <div style="width: 50%;">
+            <div class="push_down-small"></div>
+            <img style="width: 100%;border-radius: 50vw;margin: auto;" src="{% static 'images/bosque-nuboso.jpg' %}">
+            <div class="push_down-small"></div>
+            <img style="width: 100%;border-radius: 2vw;margin: auto;" src="{% static 'images/bosque-agua.jpg' %}">
+            <div class="push_down-small"></div>
+            <img style="width: 100%;border-radius: 50vw;margin: auto;" src="{% static 'images/bosque-pilas.jpg' %}">
+          </div>
+        </div>
+        <div class="push_down-small"></div>
+        <div style="color: #40CBE8"; class="med-text">Conservaci&oacute;n de los bosques</div>
+        <div style="width: 80%; margin-left: 10%; background-size: 40vw;background-image: url('/static/images/bosques_cosas.PNG');border-color: #40CBE8" class="cosas"></div>
+      </div>
+      <div class="push_down-small"></div>
+      <div class="row row_adj">
+        <div style="width: 50%">
+          <div style="color: #40CBE8" class="med-text">Entrvista: Karen Aguilar</div>
+          <iframe style="width: 90%;margin-left: 5%;" class="video" src="https://www.youtube.com/embed/MDJSj09ZfVY"></iframe>
+        </div>
+        <div class="push_down-small"></div>
+        <div style="width: 50%">
+          <div style="color: #40CBE8" class="med-text">Entrvista: Gabriel Valle Tercero</div>
+          <iframe style="width: 90%;margin-left: 5%;" class="video" src="https://www.youtube.com/embed/boEe5V21NjU"></iframe>
+        </div>
+      </div>
+      <div class="push_down-small"></div>
+      <div class="row row_adj">
+        <img style="width:5.5%;height:4vw;margin-left:auto" src="{% static 'images/agricultura-icon.PNG' %}" alt="">
+        <div style="margin-right:auto;color:#3C41E1" class="general-title" id="agricultura">Agricultura</div>
+      </div>   
+      <div class="body-text">
+        <div class="row row_adj">
+          <div style="width: 50%">
+            <p>&nbsp; &nbsp;El sector de la Agricultura es el sector que m&aacute;s contribuye a la emisi&oacute;n de GEI de Guatemala con un 46% del total nacional. En este sector se reporta lasemisiones que provienen de diversas actividades agr&iacute;colas y pecuarias, como la fermentaci&oacute;n ent&eacute;rica de los rumiantes, el manejo del esti&eacute;rcol de los animales, la aplicaci&oacute;n de fertilizantes nitrogenados, el cultivo de arroz y la&nbsp; quema de residuos agr&iacute;colas.<br />Algunos instrumentos que ser&aacute;n de apoyo para alcanzar la aspiraci&oacute;n del pa&iacute;s en este sector son:</p>
+          </div>
+          <div style="width: 50%">
+            <img style="width: 70%; border-radius: 1vw;margin-left: 15%;" src="{% static 'images/cabra.jpg' %}">
+          </div>
+        </div>
+        
+        <div class="row row_adj">
+          <ul style="width: 50%">
+            <li><p>La existencia de una Pol&iacute;tica Agropecuaria para fortalecer el Sistema Nacional de Extensi&oacute;n Rural -SNER-, entre otros programas vinculados al Plan de Acci&oacute;n para la Implementaci&oacute;n de la Pol&iacute;tica Nacional de Desarrollo Rural Integral.</p></li>
+            <li><p>El planteamiento de planes operativos anuales institucionales vinculados con el sector agr&iacute;cola programados en funci&oacute;n de las micro-cuencas.</p></li>
+            <li><p>La implementaci&oacute;n de la Pol&iacute;tica de Riego con enfoque integrado del recurso h&iacute;drico.</p></li>
+          </ul>
+          <div style="width: 50%;">
+            <img style="width: 50%;border-radius: 1vw;margin-left: 20%" src="{% static 'images/agricultura-1.PNG' %}">
+            <div class="push_down-small"></div>
+            <img style="width: 50%;border-radius: 1vw;margin-left: 20%" src="{% static 'images/agricultura-2.PNG' %}">
+          </div>
+        </div>
+      </div>
+      <div class="push_down-small"></div>
+      <div style="color: #3C41E1" class="med-text">Agricultura amigable con el medio ambiente</div>
+      <div style="width: 70%; height: 60vw; margin-left: 15%; background-size: 40vw;border-color: #3C41E1;background-image: url('/static/images/finca_cosas.PNG');background-position: top;" class="cosas"></div>
+      <div class="push_down-small"></div>
+      <div class="row row_adj">
+        <img style="width:4.5%;height:4vw;margin-left:auto" src="{% static 'images/residuos-icon.PNG' %}" alt="">
+        <div style="margin-right:auto;color:#E1853C;" class="general-title" id="residuos">Residuos</div>
+      </div>
+      <div class="body-text">
+        <div class="row row_adj">
+          <div style="width: 60%;">
+            <p>&nbsp; &nbsp;En el caso del sector de desechos se reportan las emisiones de GEI provenientes del manejo de los desechos s&oacute;lidos y del tratamiento y eliminaci&oacute;n de aguas residuales. La categor&iacute;a que m&aacute;s aporta a las emisiones es la disposici&oacute;n final de los desechos en la tierra con valores superiores al 92% del total y el resto lo aporta el tratamiento y&nbsp; eliminaci&oacute;n de aguas residuales. Esta situaci&oacute;n se explica por la ausencia generalizada de manejo adecuado de los desechos en los principales centros poblados del pa&iacute;s, donde seg&uacute;n estimaciones del MARN, aproximadamente el 75% de los desechos van a vertedero municipales no manejados ni autorizados legalmente.</p>
+          </div>
+          <div style="width: 40%">
+            <img style="border-radius: 2vw;width: 100%;margin-top: 1vw;margin-left: 2%;" src="{% static 'images/basura.jpg' %}">
+          </div>
+        </div>
+        <p>Algunos instrumentos que ser&aacute;n de apoyo para alcanzar la aspiraci&oacute;n del pa&iacute;s de reducci&oacute;n de emisiones de GEI en este sector son:</p>
+        <div class="row row_adj">
+          <div style="width: 50%">
+            <ul>
+              <li><p>Implementaci&oacute;n del Reglamento de Aguas Residuales -Acuerdo Gubernativo 236-2006.</p></li>
+              <li><p>Pol&iacute;tica de Desechos S&oacute;lidos, a&uacute;n en elaboraci&oacute;n por parte del Ministerio de Ambiente y Recursos Naturales.</p></li>
+            </ul>
+          </div>
+          <div style="width: 50%">
+            <img style="width: 30%;margin-left:25%;" src="{% static 'images/recicle.jpg' %}">
+          </div>
+        </div>
+        <div class="push_down-small"></div>
+        <div style="color: #E1853C;" class="med-text">Reciclar Basura</div>
+        <div style="width: 80%; margin-left: 10%; background-size: 40vw;border-color: #E1853C;background-image: url('/static/images/desechos_cosas.PNG');" class="cosas"></div>
+      </div>
+      <div class="push_down-small"></div>
+      <div class="row row_adj">
+        <img style="width:6%;height:4vw;margin-left:auto" src="{% static 'images/proInd-icon.PNG' %}" alt="">
+        <div style="margin-right:auto;color:#D5DD3B;" class="general-title" id="proInd">Processos Industriales</div>
+      </div>
+
+      <div class="body-text">
+        <div class="row row_adj">
+          <div style="width: 50%">
+            <p>&nbsp; &nbsp;En el sector de Procesos Industriales se reportan las emisiones que se generan en la producci&oacute;n y uso de minerales, industrias qu&iacute;micas, producci&oacute;n de metales, producci&oacute;n de papel, alimentos y bebidas, entre otros. Algunos instrumentos que ser&aacute;n de apoyo para alcanzar la aspiraci&oacute;n del pa&iacute;s en este sector son:</p>
+          </div>
+          <div style="width: 50%">
+            <img style="width: 65%; margin-left: 17.5%;border-radius: 2vw" src="{% static 'images/industria.PNG' %}">
+          </div>
+        </div>
+        <ul>
+          <li><p>Desarrollo y coordinaci&oacute;n para el involucramiento del sector privado a trav&eacute;s de acciones enmarcadas en la Pol&iacute;tica de Producci&oacute;n m&aacute;s Limpia, que se implemente como una herramienta de la competitividad y la gesti&oacute;n ambiental.</p></li>
+          <li><p>Desarrollo por parte del MARN de un Programa de Incentivos que motive actividades voluntarias de reducci&oacute;n o absorci&oacute;n de emisiones de GEI, seg&uacute;n el Art&iacute;culo 19 de la Ley Marco de Cambio Clim&aacute;tico.</p></li>
+        </ul>
+        <div style="color: #D5DD3B" class="med-text">Entrevista: Luis Muños</div>
+        <iframe class="video" src="https://www.youtube.com/embed/re7YXmaoRf0"></iframe>
+      </div>
+      <div class="push_down-small"></div>
+      <hr>
+      <div class="push_down-small"></div>
+      <div class="row row_adj">
+        <a href="{% url 'libroIntTwo' %}" class="left-container" style="width: 20%;margin-left: 5%;">
+          <div class="left">
+            <div class="row row_adj">
+              <div class="arrow-left-container">
+                <div class="arrow-left"></div>
+              </div>
+              <span>2</span> 
+            </div>
+          </div>
+        </a>
+        <div style="width: 50%"></div>
+        <a href="{% url 'libroIntFour' %}" class="right-container" style="width: 20%;margin-right: 5%;">
+          <div class="right">
+            <div class="row row_adj">
+              <span style="width: 65%;text-align: right;color: white">4</span>
+              <div class="arrow-right-container">
+                <div class="arrow-right"></div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="push_down-small"></div>
+    </div>
+
+
+
+
+
+
+    <div class="index-container">
+      <div class="general-title">
+        Indice
+      </div>
+      <a class="deny_a" href="{% url 'libroInt' %}">
+        <div style="background-color:#D6BEB0" class="section pgElse">
+          <div style="text-align:center" class="med-text">Introduccion</div>
+          <!-- <a class="deny_a" href="#apuesta"> -->
+            <div class="index-item-dis">
+              Una Apuesta Global
+            </div>
+          <!-- </a> -->
+          <!-- <a class="deny_a" href="#carta_rita"> -->
+            <div class="index-item-dis">
+              Carta de la Embajadora Rita Mishaan
+            </div>
+          <!-- </a> -->
+          <!-- <a class="deny_a" href="#momentos"> -->
+            <div class="index-item-dis">
+              Momentos Hist&oacute;ricos
+            </div>
+          <!-- </a> -->
+        </div>
+      </a>
+      <a class="deny_a" href="{% url 'libroIntTwo' %}">
+        <div style="background-color:#D6BEB0;margin-top: 1vw;padding-top: 0.5vw;" class="section">
+          <!-- <a  class="deny_a" href="#effecto-invernadero"> -->
+            <div class="index-item-dis">
+              Que es el Effecto Invernadero?
+            </div>
+          <!-- </a> -->
+          <!-- <a class="deny_a" href="#temperatura-futuro"> -->
+            <div class="index-item-dis">
+              La Temperatura del planeta del futuro
+            </div>
+          <!-- </a> -->
+          <!-- <a class="deny_a" href="#cambio-climatico"> -->
+            <div class="index-item-dis">
+              Que es el Cambio Clim&aacute;tico?
+            </div>
+          <!-- </a> -->
+          <!-- <a class="deny_a" href="#linea-de-tiempo  "> -->
+            <div class="index-item-dis">
+              Linea de Tiempo
+            </div>
+          <!-- </a> -->
+        </div>
+      </a>
+      <div class="push_down-small"></div>
+      <!-- <a class="deny_a" href="{% url 'libroIntThree' %}"> -->
+        <div style="background-color:#98CABD;margin-top: 1vw;padding-top: 0.5vw; border:0.3vw solid #78aA9D" class="section ">
+          <div style="text-align:center" class="med-text">Acuerdo de Paris en Resumen</div>
+          <a class="deny_a" href="#preambulo">
+            <div class="index-item">
+              Pre&aacute;mbulo
+            </div>
+          </a>
+          <a class="deny_a" href="#objetivo">
+            <div class="index-item">
+              Objetivo
+            </div>
+          </a>
+          <a class="deny_a" href="#pilares">
+            <div class="index-item">
+              Pilares
+            </div>
+          </a>
+          <a class="deny_a" href="#mitigacion">
+            <div class="index-item">
+              Mitigaci&oacute;n
+            </div>
+          </a>
+          <a class="deny_a" href="#energia">
+            <div class="sub-index-item">
+              Energ&iacute;a
+            </div>
+          </a>
+          <a class="deny_a" href="#bosques">
+            <div class="sub-index-item">
+              Bosques USCUSS
+            </div>
+          </a>
+          <a class="deny_a" href="#agricultura">
+            <div class="sub-index-item">
+              Agricultura
+            </div>
+          </a>
+          <a class="deny_a" href="#residuos">
+            <div class="sub-index-item">
+              Residuos
+            </div>
+          </a>
+          <a class="deny_a" href="#proInd">
+            <div class="sub-index-item">
+              Processos Industriales
+            </div>
+          </a>
+        </div>
+      <!-- </a> -->
+      <a class="deny_a" href="{% url 'libroIntFour' %}">
+        <div style="background-color:#98CABD;margin-top: 1vw;padding-top: 0.5vw;" class="section pgElse">
+          <!-- <a class="deny_a" href="#adaptacion"> -->
+            <div class="index-item-dis">
+              Adaptaci&oacute;n
+            </div>
+          <!-- </a> -->
+          <!-- <a class="deny_a" href="#financiamiento"> -->
+            <div class="index-item-dis">
+              Financiamiento
+            </div>
+          <!-- </a> -->
+        </div>
+      </a>
+      <a class="deny_a" href="{% url 'libroIntFive' %}">
+      <div style="background-color:#98CABD;margin-top: 1vw;padding-top: 0.5vw;" class="section pgElse">
+        <!-- <a class="deny_a" href="#edbe"> -->
+          <div class="index-item-dis">
+            Estrategias de Desarrollo Bajo Emissiones
+          </div>
+        <!-- </a> -->
+        <!-- <a class="deny_a" href="#educacion"> -->
+          <div class="index-item-dis">
+            Educaci&oacute;n, Sensibilizaci&oacute;n y Participaci&oacute;n del Publico
+          </div>
+        <!-- </a> -->
+        <!-- <a class="deny_a" href="#locales"> -->
+          <div class="index-item-dis">
+            Plataforma para Communidades Locales
+          </div>
+        <!-- </a> -->
+        <!-- <a class="deny_a" href="#ruta"> -->
+          <div class="index-item-dis">
+            Ruta Cr&iacute;tica
+          </div>
+        <!-- </a> -->
+      </div>
+      </a>
+      <div style="height: 10vw;"> </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block addScript %}
+<script src="{% static 'js/libroInt_ab.js' %}" type="text/javascript"></script>
+{% endblock %}

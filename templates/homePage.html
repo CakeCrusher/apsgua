@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+{% load static from staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      {% block addTitle%}
+      Home
+      {% endblock %}
+    </title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129128783-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-129128783-1');
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/homePage_bi.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/aps-watermark.png' %}">
+    {% block addCss%}
+    {% endblock %}
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="support-container">
+      <div style="margin-left: 0%; margin-right: 0%; height: 100%" class="row row-adj">
+        <div style="width: 10%;">
+          <div class="support-pull">
+            <div style="height: 45%; "></div>
+            <div  class="support-arrow"></div>
+          </div>
+        </div>
+        <div style="width: 5%;"></div>
+        <div style="width: 85%;">
+          <div class="row row-adj">
+            <div style="width: 48%; margin-left: 2%;">
+              <p style="width: 100%;">&nbsp; &nbsp; <span style="font-size: 1.5vw; font-weight: bold;">Suscríbete</span> para estar notifiado sobre <strong>nuevas opportuidades</strong> y <strong>cambios a esta pagina web</strong>.</p>
+              <img style="width: 28%;margin-left: 33%;" src="{% static 'images/subscribe.png' %}">
+              
+              <form id="subscribe-form" onsubmit="
+                alert('Gracias por subscribirse.');" method="post">
+                {% csrf_token %}
+                <div class="row row-adj">
+                  <div class="support-label">Nombre:&nbsp; </div>
+                  {{ form.name }}
+                </div>
+                <div class="row row-adj">
+                  <div class="support-label">Correo Electrónico:&nbsp; </div>
+                  {{ form.email }}
+                </div>            
+                <button id="support-submit" type="submit">Enviar</button>
+              </form>
+            </div>
+            <div style="width: 5%;">
+              <div style="height: 90%; width: 1px; position: relative; top: 5%; left: 40%; background-color: #E5E5E5;"></div>
+            </div>
+            <div style="width: 43%; margin-left: 2%;">
+              <p style="width: 100%;">&nbsp; &nbsp; <span style="font-size: 1.5vw; font-weight: bold;">Ayudanos</span> a <strong>mejorar nuestro website</strong> atraves de sus commentarios.</p>
+              <img style="width: 33%;margin-left: 33%;" src="{% static 'images/ayudanos.png' %}">
+              <form method="post" onsubmit="
+                alert('Gracias por tus comentarios.');">
+                {% csrf_token %}
+                <div class="row row-adj">
+                  <div class="support-label">Commentario:&nbsp; </div>
+                  {{ helpForm.comment }}
+                </div>            
+                <button id="support-submit" type="submit">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row nav-size row-adj">
+      <!-- <nav class="row nav-size"> -->
+        <div class="push_left"></div>
+        <a class="nav-brand-item" href="{% url 'homePage' %}">
+          <div class="row row-adj">
+            <div class="nav-brand-text">APS</div>
+            <div class="nav-brand-sub-text">Gua</div>
+          </div>
+        </a>
+        <a class="nav-item" href="{% url 'libroInt' %}">
+          <p class="nav-text">Libro Interactivo</p>
+          <div class="nav-image-container">
+            <img class="nav-image" src="{% static 'images/nav-IBook-D.png' %}" alt="Libro Interactivo">
+          </div>
+        </a>
+        <a class="nav-item" href="{% url 'opportunidades' %}">
+          <p class="nav-text">Oportunidades</p>
+          <div class="nav-image-container">
+            <img class="nav-image" src="{% static 'images/nav-opportunity-D.png' %}" alt="Logo1">
+          </div>
+        </a>
+        <a class="nav-item" href="{% url 'contactar' %}">
+          <p class="nav-text">Contactar</p>
+          <div class="nav-image-container">
+            <img class="nav-image" src="{% static 'images/nav-contact-D.png' %}" alt="Logo1">
+          </div>
+        </a>
+        <div class="push_left_contributers"></div>
+        <div class="theatre-container">
+          <div style="font-weight: bold;;" class="theatre-title" href="#">Autoria</div>
+          <div class="row">
+            <div class="theatre-left"></div>
+            <div class="theatre-frames-container">
+              <div class="theatre-item" image="{% static 'images/DESIGUAL.PNG' %}" name="DESIGUAL" url="{% url 'desigual' %}"></div>
+              <div class="theatre-item" image="{% static 'images/SS.png' %}" name="SS" url="{% url 'ss' %}"></div>
+              <div class="theatre-item" image="{% static 'images/logo33.png' %}" name="Sotzi´il" url="https://sotzil-guatemaya.org/"></div>
+              <!-- <div class="theatre-item" image="{% static 'images/logo11.png' %}" name="Four" url="#"></div>
+              <div class="theatre-item" image="{% static 'images/logo22.png' %}" name="Five" url="#"></div>
+              <div class="theatre-item" image="{% static 'images/logo33.png' %}" name="Six" url="#"></div> -->
+            </div>
+            <div class="theatre-right"></div>
+          </div>
+          <div class="theatre-display">
+            <a target="_blank" class="theatre-frame-link" href="">Identity</a>
+          </div>
+        </div>
+        <div class="push_left-to_donate"></div>
+        <a class="nav-item-c" style="outline: none" tabindex="0" role="button" data-html="true" title="En construcción" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="left" data-content="<img style='width:30%;position:relative;left:35%;' src='/static/images/ayudanos.png'>">
+          <p class="nav-text" style="color:rgb(140,140,140)">Donar</p>
+          <div class="nav-image-container">
+            <img class="nav-image" src="{% static 'images/nav-donate-C.png' %}" alt="Logo1">
+          </div>
+        </a>
+      <!-- </nav> -->
+    </div>
+    {% block addContent %}
+    <div id="main">
+    <div class="adps-brand-title">
+      Acuerdo de Par&iacute;s Simplificado
+    </div>
+    <div class="adps-sub-title">
+      para Guatemala
+    </div>
+    <div class="row">
+      <div class="window-pic_container">
+        <div class="window-text-container">
+          <div class="window-text-title">
+            Objetivo:
+          </div>
+          <div class="window-text-body">
+            Reforzar la respuesta del planeta a la amenaza
+            de los efectos del Cambio Climático en el
+            contexto del Desarrollo Sostenible y de los
+            esfuerzos por erradicar la pobreza.
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div style="width: 88%; height: 8vw; position: relative; left: 6%;" class="row">
+      <div class="adps-books-container">
+          <div class="adps-books-item row">
+            <p style="width: 50%;" class="adps-books-title">Acuredo de Par&iacute;s Simplificado Para Guatemala</p>
+            <div style="width: 50%;" id="adps_B" class="adps-books-image" image="/static/images/front_page-D.png">
+              <div class="bb_top">
+                <!-- <a style="outline: none" tabindex="0" role="button" data-html="true" title="Idioma:" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="top" data-content="
+                  <div style='margin-left: 0vw;' class='row'>
+                    <div style='width: 45%'>
+                      <img class='book-btn' style='width:90%;position:relative;left:5%;' src='/static/images/english-version.png'>
+                    </div>
+                    <div style='width: 5%'>
+                      <div style='height: 90%; width: 1px; position: relative; top: 5%; left: 40%; background-color: #E5E5E5;'></div>
+                    </div>
+                    <div style='width: 45%'>
+                      <img class='book-btn' style='width:90%;position:relative;left:5%;' src='/static/images/espanol_version.png'>
+                    </div>
+                  </div>
+                ">
+                  <img class="book-btn" style="width: 30%;" src="{% static 'images/website.png' %}">
+                </a> -->
+                <a target="_blank" href="{% url 'libroInt' %}">
+                  <img class="book-btn" style="width: 30%;" src="{% static 'images/website.png' %}">
+                </a>
+              </div>
+              <div style="margin-left: 11%;" class="bb_bot row row-adj">
+                <a style="cursor: pointer;width: 30%; margin-left: 5%;outline: none" tabindex="0" role="button" data-html="true" title="Idioma:" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="top" data-content="
+                  <div style='margin-left: 0vw;' class='row'>
+                    <div style='width: 45%'>
+                      <a style='width: 30%;  margin-right: 5%;' href='static/downloads/simplified_paris_agreement.pdf' download>
+                        <img class='book-btn' style='width:90%;position:relative;left:5%;' src='/static/images/english-version.png'>
+                      </a>
+                    </div>
+                    <div style='width: 5%'>
+                      <div style='height: 90%; width: 1px; position: relative; top: 5%; left: 40%; background-color: #E5E5E5;'></div>
+                    </div>
+                    <div style='width: 45%'>
+                      <a style='width: 30%;  margin-right: 5%;' href='static/downloads/acuerdo_de_paris_simplificado.pdf' download>
+                        <img class='book-btn' style='width:90%;position:relative;left:5%;' src='/static/images/espanol_version.png'>
+                      </a>
+                    </div>
+                  </div>
+                ">
+                  <img class="book-btn" style="width: 100%;" src="{% static 'images/download.png' %}">
+                </a>
+                
+                <!-- <a style="width: 30%;  margin-right: 5%;" href="static/downloads/acuerdo_de_paris_simplificado.pdf" download>
+                  <img class="book-btn" style="width: 100%;" src="{% static 'images/download.png' %}">
+                </a> -->
+                <a style="cursor: pointer;width: 30%; margin-left: 5%;outline: none" tabindex="0" role="button" data-html="true" title="Idioma:" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="top" data-content="
+                  <div style='margin-left: 0vw;' class='row'>
+                    <div style='width: 45%'>
+                      <a style='width: 30%; margin-left: 5%;' target='_blank' rel='noopener noreferrer' href='static/downloads/simplified_paris_agreement.pdf'>
+                        <img class='book-btn' style='width:90%;position:relative;left:5%;' src='/static/images/english-version.png'>
+                      </a>
+                    </div>
+                    <div style='width: 5%'>
+                      <div style='height: 90%; width: 1px; position: relative; top: 5%; left: 40%; background-color: #E5E5E5;'></div>
+                    </div>
+                    <div style='width: 45%'>
+                      <a style='width: 30%; margin-left: 5%;' target='_blank' rel='noopener noreferrer' href='static/downloads/acuerdo_de_paris_simplificado.pdf'>
+                        <img class='book-btn' style='width:90%;position:relative;left:5%;' src='/static/images/espanol_version.png'>
+                      </a>
+                    </div>
+                  </div>
+                ">
+                  <img class="book-btn" style="width: 100%;" src="{% static 'images/pdf-link.png' %}">
+                </a>
+                <!-- <a style="width: 30%; margin-left: 5%;" target="_blank" rel="noopener noreferrer" href="static/downloads/acuerdo_de_paris_simplificado.pdf">
+                  <img class="book-btn" style="width: 100%;" src="{% static 'images/pdf-link.png' %}">
+                </a> -->
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="adps-books-container">
+          <div class="adps-books-item row">
+            <p style="width: 50%;" class="adps-books-title">Acuerdo de Par&iacute;s: Documento Official, CMNUCC</p>
+            <div style="width: 50%;" id="adps_AdP" class="adps-books-image" image="/static/images/adp-D.png">
+              <div class="bb_top">
+                <!-- <a style="cursor: pointer;width: 30%; margin-left: 5%;outline: none" tabindex="0" role="button" data-html="true" title="Idioma:" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="top" data-content="
+                  <div style='margin-left: 0vw;' class='row'>
+                    <div style='width: 45%'>
+                      <a style='width: 30%; margin-left: 5%;' target='_blank' rel='noopener noreferrer' href='static/downloads/acuerdo_de_paris_simplificado.pdf'>
+                        <img class='book-btn' style='width:90%;position:relative;left:5%;' src='/static/images/english-version.png'>
+                      </a>
+                    </div>
+                    <div style='width: 5%'>
+                      <div style='height: 90%; width: 1px; position: relative; top: 5%; left: 40%; background-color: #E5E5E5;'></div>
+                    </div>
+                    <div style='width: 45%'>
+                      <a style='width: 30%; margin-left: 5%;' target='_blank' rel='noopener noreferrer' href='static/downloads/acuerdo_de_paris_simplificado.pdf'>
+                        <img class='book-btn' style='width:90%;position:relative;left:5%;' src='/static/images/espanol_version.png'>
+                      </a>
+                    </div>
+                  </div>
+                ">
+                  <img class="book-btn" style="width: 30%;" src="{% static 'images/website.png' %}">
+                </a> -->
+                <a target="_blank" href="https://unfccc.int/">
+                  <img class="book-btn" style="width: 30%;" src="{% static 'images/website.png' %}">
+                </a>
+              </div>
+              <div style="margin-left: 11%;" class="bb_bot row row-adj">
+                <a style="cursor: pointer;width: 30%; margin-left: 5%;outline: none" tabindex="0" role="button" data-html="true" title="Idioma:" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="top" data-content="
+                  <div style='margin-left: 0vw;' class='row'>
+                    <div style='width: 45%'>
+                      <a style='width: 30%;  margin-right: 5%;' href='static/downloads/english_paris_agreement.pdf' download>
+                        <img class='book-btn' style='width:90%;position:relative;left:5%;' src='/static/images/english-version.png'>
+                      </a>
+                    </div>
+                    <div style='width: 5%'>
+                      <div style='height: 90%; width: 1px; position: relative; top: 5%; left: 40%; background-color: #E5E5E5;'></div>
+                    </div>
+                    <div style='width: 45%'>
+                      <a style='width: 30%;  margin-right: 5%;' href='static/downloads/spanish_paris_agreement.pdf' download>
+                        <img class='book-btn' style='width:90%;position:relative;left:5%;' src='/static/images/espanol_version.png'>
+                      </a>
+                    </div>
+                  </div>
+                ">
+                  <img class="book-btn" style="width: 100%;" src="{% static 'images/download.png' %}">
+                </a>
+                <!-- <a style="width: 30%;  margin-right: 5%;" href="static/downloads/spanish_paris_agreement.pdf" download>
+                  <img class="book-btn" style="width: 100%;" src="{% static 'images/download.png' %}">
+                </a> -->
+                <a style="cursor: pointer;width: 30%; margin-left: 5%;outline: none" tabindex="0" role="button" data-html="true" title="Idioma:" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="top" data-content="
+                  <div style='margin-left: 0vw;' class='row'>
+                    <div style='width: 45%'>
+                      <a style='width: 30%; margin-left: 5%;' target='_blank' rel='noopener noreferrer' href='static/downloads/english_paris_agreement.pdf'>
+                        <img class='book-btn' style='width:90%;position:relative;left:5%;' src='/static/images/english-version.png'>
+                      </a>
+                    </div>
+                    <div style='width: 5%'>
+                      <div style='height: 90%; width: 1px; position: relative; top: 5%; left: 40%; background-color: #E5E5E5;'></div>
+                    </div>
+                    <div style='width: 45%'>
+                      <a style='width: 30%; margin-left: 5%;' target='_blank' rel='noopener noreferrer' href='static/downloads/spanish_paris_agreement.pdf'>
+                        <img class='book-btn' style='width:90%;position:relative;left:5%;' src='/static/images/espanol_version.png'>
+                      </a>
+                    </div>
+                  </div>
+                ">
+                  <img class="book-btn" style="width: 100%;" src="{% static 'images/pdf-link.png' %}">
+                </a>
+                <!-- <a style="width: 30%; margin-left: 5%;" target="_blank" rel="noopener noreferrer" href="static/downloads/spanish_paris_agreement.pdf">
+                  <img class="book-btn" style="width: 100%;" src="{% static 'images/pdf-link.png' %}">
+                </a>
+              </div> -->
+            </div>
+          </div>
+      </div>
+    </div>
+    </div>
+    <div style="height: 25vw;"></div>
+    <a target="_blank" rel="noopener noreferrer" class="general-link-title" href= '#'>
+      <p class="general-link-title">Articulos Recientes</p>
+    </a>
+    <div style="margin-left: 0; width: 100%;" class="row">
+      <div style="width: 50%;">
+        <div style="margin-left:0;" class="row">
+          <div class="newsOps" image="CNN.png" providerName="CNN" provider="cnn-es"></div>
+          <div class="newsOps" image="NYT.png" providerName="The New York Times" provider="the-new-york-times"></div>
+          <div class="newsOps" image="HP.jpg" providerName="The Huffington Post" provider="the-huffington-post"></div>
+        </div>
+        <div class="newsContainer" style="width: 100%; position: relative;">
+    <!--  <div class= 'box'>
+            <div class="row" style="margin-left: 0; width: 100%; height: 15vw; overflow: hidden;">
+              <div style="width: 25%; margin-left: 5%">
+                <img src={{ i.Art }} style="width: 90%; margin-left: 5%; border-radius: 1vw;">
+              </div>
+              <div style="font-size: 1.5vw; width: 62.5%; margin-left: 2.5%">
+                <a target="_blank" rel="noopener noreferrer" class="general-link-title" href= {{ i.Link }}>
+                  <p style=" font-size: 2vw; height: 5vw; overflow: hidden;" class="general-link-title">{{ i.Headline }}</p>
+                </a>
+              </div>
+            </div>
+            <hr style="color: rgb(78, 162, 74); background-color: rgb(78, 162, 74); width: 100%">
+            <p style="font-size: 1.5vw; font-weight: bold; text-align: right; margin-right: 5%;  height: 5vw; overflow: hidden;">{{i.Provider}}</p>
+          </div> -->
+        </div>
+        <!-- <script type="text/javascript" src="{% static "js/articlesHP.js" %}"></script> -->
+      </div>
+      <div style="width: 50%;">
+        <div style="height: 3vw;"></div>
+        <p class="general-title">Medio Ambiente</p>
+        <iframe class="mediaVid" src=""></iframe>
+      </div>
+    </div>
+    
+    <div style="height: 5vw"></div>
+    <div class="row row-adj">
+      <div style="width: 50%">
+        <a class="no-a" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=IlNbzMRv_4M&t">
+          <div class="pcc-briefing-video-container">
+            <div style="font-size: 1.4vw" class="pcc-tag">Apertura de la Ceremonia de Firma del Acuerdo de París sobre Cambio Climático en la Organización de Naciones Unidas, Nueva York, Abril 22, 2016</div>
+          </div>
+        </a>
+        
+      </div>
+      <div class="pcc-briefing-text-container">
+        <a target="_blank" rel="noopener noreferrer" class="general-link-title" href="https://unfccc.int/process-and-meetings/the-paris-agreement/the-paris-agreement">
+          <p class="general-link-title">COP 21, Paris, Francia</p>
+        </a>
+        <p style="font-size: 1.5vw" class="general-text">
+          &nbsp; &nbsp;“París marcó el momento en que el mundo finalmente decidió prestar atención a la montaña creciente de pruebas que se ha ido acumulando durante años. Marcó el momento en que pusimos fin, de una vez por todas, al debate sobre si el cambio climático es real y, en cambio, inicia la etapa en la que debemos enfocarnos en el cómo, como comunidad global, vamos a abordar la irrefutable realidad de que la naturaleza está cambiando a pasos agigantados debido a nuestras propias decisiones”<br> <strong>-Secretario de Estado, John Kerry</strong>
+        </p>
+      </div>
+    </div>
+    <div class="push_down"></div>
+      <p class="general-link-title"><a class="general-link-title" href="#">Oportunindades</a></p>
+      <div class="tabs-container">
+        <div class="row">
+          <div class="tab">
+            <div style="height:5vw;overflow-y: hidden;overflow-x:hidden;" class="general-title">Eco-Turismo</div>
+            <div>
+              <div style="margin-left: 5%;" class="row row-adj propuesta-btn">
+                  <div style="margin-left: 2vw"></div>
+                  <div class="propuesta-arrow"></div>
+                  <div class="propuesta-text">Propuesta</div>
+              </div>
+              <div class="propuesta-container">
+                <div style="height: 3vw;"></div>
+                <div class="row row-adj">
+                  <div style="margin-left: 5vw;">
+                    <div style="margin-left: 0vw;" class="row">
+                      <div style="width: 40%;">
+                        <img style="margin-left:15%;width: 10vw;" src="{% static 'images/ad.png' %}">
+                      </div>
+                      <div style="font-size: 1.5vw; width: 50%"><strong>Los invitamos a participar:</strong><br> Nos gustaría escuchar su voz, envíen sus ideas de propuestas/proyectos de acción climática por esta vía.</div>
+                    </div>
+                    <hr>
+                    <form id="subscribe-form" onsubmit="
+                alert('Gracias por la Propuesta.');" method="post">
+                      {% csrf_token %}
+                      <div class="row row-adj">
+                        <div class="support-label">Nombre:&nbsp; </div>
+                        {{ propuestaForm.namePropuesta }}
+                      </div>
+                      <div class="row row-adj">
+                        <div class="support-label">Correo Electrónico:&nbsp; </div>
+                        {{ propuestaForm.emailPropuesta }}
+                      </div>   
+                      <div class="row row-adj">
+                        <div class="support-label">Compania/Organización:&nbsp; </div>
+                        {{ propuestaForm.organizacion }}
+                      </div> 
+                      <div class="row row-adj">
+                        <div class="support-label">Propuesta:&nbsp; </div>
+                        {{ propuestaForm.propuesta }}
+                      </div>       
+                      <button id="support-submit" type="submit">Enviar</button>
+                      <div style="height: 3vw"></div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+              {% for i in opportunidades_model %}
+                {% if i.category == "Turistas" or i.category == "Todos" %}
+                <a class="a_remove" href='{{ i.link }}'>
+                  <div class="opp_model-container">
+                    <div class="row hide_overflow">
+                      <div class="opp_model-image-container">
+                        <div class="opp_model-image" style="background-image:url('/media/{{ i.image }}')"></div>
+                      </div>
+                      <div class="opp_model-title">{{ i.title }}</div>
+                      <div class="opp_model-description">{{ i.description }}</div>
+                    </div>
+                  </div>
+                </a>
+                <hr>
+                {% endif %}
+              {% endfor %}
+          </div>
+          <div class="tab">
+            <div style="height:5vw;overflow-y: hidden;overflow-x:hidden;" class="general-title">Carreras Ambientales</div>
+            <div>
+              <div style="margin-left: 5%;" class="row row-adj propuesta-btn">
+                  <div style="margin-left: 2vw"></div>
+                  <div class="propuesta-arrow"></div>
+                  <div class="propuesta-text">Propuesta</div>
+              </div>
+              <div class="propuesta-container">
+                <div style="height: 3vw;"></div>
+                <div class="row row-adj">
+                  <div style="width: 5vw;"></div>
+                  <div style="margin-left: 5vw;">
+                    <div style="margin-left: 0vw;" class="row">
+                      <div style="width: 40%;">
+                        <img style="margin-left:15%;width: 10vw;" src="{% static 'images/ad.png' %}">
+                      </div>
+                      <div style="font-size: 1.5vw; width: 50%"><strong>Los invitamos a participar:</strong><br> Nos gustaría escuchar su voz, envíen sus ideas de propuestas/proyectos de acción climática por esta vía.</div>
+                    </div>
+                    <hr>
+                    <form id="subscribe-form" onsubmit="
+                alert('Gracias por la Propuesta.');" method="post">
+                      {% csrf_token %}
+                      <div class="row row-adj">
+                        <div class="support-label">Nombre:&nbsp; </div>
+                        {{ propuestaForm.namePropuesta }}
+                      </div>
+                      <div class="row row-adj">
+                        <div class="support-label">Correo Electrónico:&nbsp; </div>
+                        {{ propuestaForm.emailPropuesta }}
+                      </div>   
+                      <div class="row row-adj">
+                        <div class="support-label">Compania/Organización:&nbsp; </div>
+                        {{ propuestaForm.organizacion }}
+                      </div> 
+                      <div class="row row-adj">
+                        <div class="support-label">Propuesta:&nbsp; </div>
+                        {{ propuestaForm.propuesta }}
+                      </div>       
+                      <button id="support-submit" type="submit">Enviar</button>
+                      <div style="height: 3vw"></div>
+                    </form>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <hr>
+              {% for i in opportunidades_model %}
+                {% if i.category == "Estudiantes" or i.category == "Todos" %}
+                <a class="a_remove" href='{{ i.link }}'>
+                  <div class="opp_model-container">
+                    <div class="row">
+                      <div class="opp_model-image-container">
+                        <div class="opp_model-image" style="background-image:url('/media/{{ i.image }}')"></div>
+                      </div>
+                      <div class="opp_model-title">{{ i.title }}</div>
+                      <div class="opp_model-description">{{ i.description }}</div>
+                    </div>
+                  </div>
+                </a>
+                <hr>
+                {% endif %}
+              {% endfor %}
+          </div>
+          <div class="tab">
+            <div style="height:5vw;overflow-y: hidden;overflow-x:hidden;" class="general-title">Econom&iacute;as Bajos en Carbono</div>
+            <div>
+              <div style="margin-left: 5%;" class="row row-adj propuesta-btn">
+                  <div style="margin-left: 2vw"></div>
+                  <div class="propuesta-arrow"></div>
+                  <div class="propuesta-text">Propuesta</div>
+              </div>
+              <div class="propuesta-container">
+                <div style="height: 3vw;"></div>
+                <div class="row row-adj">
+                  <div style="width: 5vw;"></div>
+                  <div style="margin-left: 5vw;">
+                    <div style="margin-left: 0vw;" class="row">
+                      <div style="width: 40%;">
+                        <img style="margin-left:15%;width: 10vw;" src="{% static 'images/ad.png' %}">
+                      </div>
+                      <div style="font-size: 1.5vw; width: 50%"><strong>Los invitamos a participar:</strong><br> Nos gustaría escuchar su voz, envíen sus ideas de propuestas/proyectos de acción climática por esta vía.</div>
+                    </div>
+                    <hr>
+                    <form id="subscribe-form" onsubmit="
+                alert('Gracias por la Propuesta.');" method="post">
+                      {% csrf_token %}
+                      <div class="row row-adj">
+                        <div class="support-label">Nombre:&nbsp; </div>
+                        {{ propuestaForm.namePropuesta }}
+                      </div>
+                      <div class="row row-adj">
+                        <div class="support-label">Correo Electrónico:&nbsp; </div>
+                        {{ propuestaForm.emailPropuesta }}
+                      </div>   
+                      <div class="row row-adj">
+                        <div class="support-label">Compania/Organización:&nbsp; </div>
+                        {{ propuestaForm.organizacion }}
+                      </div> 
+                      <div class="row row-adj">
+                        <div class="support-label">Propuesta:&nbsp; </div>
+                        {{ propuestaForm.propuesta }}
+                      </div>       
+                      <button id="support-submit" type="submit">Enviar</button>
+                      <div style="height: 3vw"></div>
+                    </form>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <hr>
+              {% for i in opportunidades_model %}
+                {% if i.category == "Companias" or i.category == "Todos" %}
+                <a class="a_remove" href='{{ i.link }}'>
+                  <div class="opp_model-container">
+                    <div class="row hide_overflow">
+                      <div class="opp_model-image-container">
+                        <div class="opp_model-image" style="background-image:url('/media/{{ i.image }}')"></div>
+                      </div>
+                      <div class="opp_model-title">{{ i.title }}</div>
+                      <div class="opp_model-description">{{ i.description }}</div>
+                    </div>
+                  </div>
+                </a>
+                <hr>
+                {% endif %}
+              {% endfor %}
+          </div>
+          <div class="tab">
+            <div style="height:5vw;overflow-y: hidden;overflow-x:hidden;" class="general-title">Experiencias Locales</div>
+            <div>
+              <div style="margin-left: 5%;" class="row row-adj propuesta-btn">
+                  <div style="margin-left: 2vw"></div>
+                  <div class="propuesta-arrow"></div>
+                  <div class="propuesta-text">Propuesta</div>
+              </div>
+              <div class="propuesta-container">
+                <div style="height: 3vw;"></div>
+                <div class="row row-adj">
+                  <div style="width: 5vw;"></div>
+                  <div style="margin-left: 5vw;">
+                    <div style="margin-left: 0vw;" class="row">
+                      <div style="width: 40%;">
+                        <img style="margin-left:15%;width: 10vw;" src="{% static 'images/ad.png' %}">
+                      </div>
+                      <div style="font-size: 1.5vw; width: 50%"><strong>Los invitamos a participar:</strong><br> Nos gustaría escuchar su voz, envíen sus ideas de propuestas/proyectos de acción climática por esta vía.</div>
+                    </div>
+                    <hr>
+                    <form id="subscribe-form" onsubmit="
+                alert('Gracias por la Propuesta.');" method="post">
+                      {% csrf_token %}
+                      <div class="row row-adj">
+                        <div class="support-label">Nombre:&nbsp; </div>
+                        {{ propuestaForm.namePropuesta }}
+                      </div>
+                      <div class="row row-adj">
+                        <div class="support-label">Correo Electrónico:&nbsp; </div>
+                        {{ propuestaForm.emailPropuesta }}
+                      </div>   
+                      <div class="row row-adj">
+                        <div class="support-label">Compania/Organización:&nbsp; </div>
+                        {{ propuestaForm.organizacion }}
+                      </div> 
+                      <div class="row row-adj">
+                        <div class="support-label">Propuesta:&nbsp; </div>
+                        {{ propuestaForm.propuesta }}
+                      </div>       
+                      <button id="support-submit" type="submit">Enviar</button>
+                      <div style="height: 3vw"></div>
+                    </form>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <hr>
+              {% for i in opportunidades_model %}
+                {% if i.category == "Locales" or i.category == "Todos" %}
+                <a class="a_remove" href='{{ i.link }}'>
+                  <div class="opp_model-container">
+                    <div class="row hide_overflow">
+                      <div class="opp_model-image-container">
+                        <div class="opp_model-image" style="background-image:url('/media/{{ i.image }}')"></div>
+                      </div>
+                      <div class="opp_model-title">{{ i.title }}</div>
+                      <div class="opp_model-description">{{ i.description }}</div>
+                    </div>
+                  </div>
+                </a>
+                <hr>
+                {% endif %}
+              {% endfor %}
+          </div>
+        </div>
+      </div>
+    <div class="med-text"></div>
+    <div class="push_down"></div>
+    <div class="row">
+      <div style="width: 50%;">
+        <a href="{% url 'contactar' %}" style="text-decoration: none"><div class="general-link-title">Contactar</div></a>
+        <div class="push_down-small"></div>
+        <div style="margin-left: 5%;" class="row row-adj">
+          <div style="width: 30%">
+            <img style="width: 100%; border-radius: 2vw; " src="{% static 'images/ADBE.jpg' %}">
+          </div>
+          <div style="width: 70%;">
+            <div style="text-align: left;" class="general-title">Rita Mishaan</div>
+            <hr style="padding-right: 10%">
+            <p class="general-text"><strong>Correo Electr&oacute;nico:</strong><a href="mailto:ritamishaan@gmail.com?subject=APSGua"> ritamishaan@gmail.com</a></p>
+            <p class="general-text"><strong>Tel&eacute;fono:</strong> 502-5017-5917</p>
+            <p class="general-text" style="font-size: 0.7vw"><strong>Horas Disponibles:</strong> Cualquier Hora</p>
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="donate-home-container">
+        <a class="donar-c" style="outline: none; cursor: pointer;" tabindex="0" role="button" data-html="true" title="En construcción" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="top" data-content="<img style='width:30%;position:relative;left:35%;' src='/static/images/ayudanos.png'>">
+          <div class="general-title" style="text-decoration: none;color:rgb(140, 140, 140);">Donar</div>
+          <img style="width: 30%;position: relative;left: 35%;" class="donar-image" src="{% static 'images/nav-donate-C.png' %}">
+        </a>
+      </div>
+    </div>
+    <div class="push_down-small"></div>
+    </div>
+    {% endblock %}
+  </body>
+  {% block addScript %}
+  {% endblock %}
+  <script type="text/javascript" src="{% static "js/articlesHP_c.js" %}"></script>
+  <script type="text/javascript" src='{% static "js/homePage_ar.js" %}'></script>
+</html>

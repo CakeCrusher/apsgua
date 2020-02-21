@@ -1,0 +1,82 @@
+/* .hello{
+  color: red;
+} */
+.thirds{
+  width: 33%;
+  height: 100%;
+}
+.text_margin{
+  padding-left: 3vw;
+}
+.donaciones_images{
+  position:relative;
+  margin-left: 15%;
+  margin-right: auto;
+  width: 70%;
+  border-radius: 2vw;
+  border: 1vw solid #212529;
+}
+/* #212529 */
+.donacion_container{
+  background-color: white;
+  height: 30vw;
+  width: 100%;
+  border-radius: 2vw;
+  border: 1vw solid rgb(78, 162, 74);
+}
+.in_form{
+  width: 100%;
+  height: 100%;
+}
+.donacion_container:hover{
+  border: 1vw solid rgb(4, 92, 44);
+}
+.donacion_input{
+  margin-top: 1vw;
+  margin-left: 10%;
+}
+#id_cvc,#id_cardNumber,#id_email,#id_expirationDate,#id_expirationDateEx,#id_amount{
+  font-size: 1.2vw;
+  border: none;
+  border-bottom:0.2vw solid rgb(78, 162, 74);
+  color: rgb(78, 162, 74);
+  background-color: none;
+}
+#id_cvc:hover,#id_cardNumber:hover,#id_email:hover,#id_expirationDate:hover,#id_expirationDateEx:hover,#id_amount:hover{
+  border-bottom: 0.2vw solid rgb(4, 92, 44);
+  color: rgb(4, 92, 44);
+}
+#id_cvc:focus,#id_cardNumber:focus,#id_email:focus,#id_expirationDate:focus,#id_expirationDateEx:focus,#id_amount:focus{
+  outline: none;
+  color: rgb(4, 92, 44);
+}
+.donacion_label{
+  font-size: 1.2vw;
+  padding-right: 1vw;
+  padding-top: 1.5%;
+  font-weight: bold;
+  color: rgb(78, 162, 74);
+}
+.form_submit{
+  position: relative;
+  right: 0.05%;
+  margin-top:5%;
+  width: 100%;
+  height: 39%;
+  background-color: rgb(78, 162, 74);
+  color: white;
+  border-bottom-left-radius: 0.9vw;
+  border-bottom-right-radius: 0.9vw;
+  font-size: 5vw;
+  border: none;
+  transition: background-color 0.5s;
+}
+.form_submit:hover{
+  cursor: pointer;
+  background-color: rgb(4, 92, 44);
+}
+.dollar{
+  position: relative;
+  bottom: 2vw;
+  font-size: 2vw;
+}

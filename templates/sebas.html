@@ -1,0 +1,40 @@
+{% extends 'homePage.html' %}
+{% load static from staticfiles%}
+{% block addTitle %}
+  SS
+{% endblock %}
+{% block addContent %}
+<div style="margin-left: 0vw; margin-top: 2vw;" class="row general-title">
+	<div style="margin-left: auto">
+		<img style="width: 3vw; margin-right: 1vw;" src="{% static 'images/SS.png' %}">
+	</div>
+	<div style="margin-right: auto;">SS</div>
+</div>
+<hr>
+<div style="margin-left: 0vw" class="row">
+	<div style="width: 30%">
+		<img style="border-radius: 2vw;border:0.5vw solid #212529;width: 70%; margin-left: 15%" src="{% static 'images/sebas_profi.png' %}">
+		<img style="position: relative; width: 7vw; background-color: white; border-radius: 5vw; border:0.5vw solid #212529; left: 22vw; top: -31vw;" src="{% static 'images/SS.png' %}">
+	</div>
+	<div style="width: 70%">
+		<div style="margin-left: 0vw; font-size: 3vw" class="row">
+			<div style="font-weight: bold">Director:</div>
+			<div>&nbsp; &nbsp;Sebastian Sosa</div>
+		</div>
+		<div style="margin-left: 0vw; font-size: 3vw" class="row">
+			<div style="font-weight: bold">Contribuci&oacute;n:</div>
+			<div>&nbsp; &nbsp;Diseñador del Website</div>
+		</div>
+		<hr>
+		<div style="margin-left: 0vw; font-size: 3vw" class="row">
+			<div style="font-weight: bold">Teléfono:</div>
+			<div>&nbsp; &nbsp;786-270-7297</div>
+		</div>
+		<div style="margin-left: 0vw; font-size: 3vw" class="row">
+			<div style="font-weight: bold">Correo electrónico:</div>&nbsp; &nbsp;
+			<a href="mailto:1sebastian1sosa1@gmail.com?subject=SS(APSGua)">1sebastian1sosa1@gmail.com</a>
+		</div>
+		
+	</div>
+</div>
+{% endblock%}

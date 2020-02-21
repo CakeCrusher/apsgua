@@ -1,0 +1,81 @@
+/* .helo{
+  color: red;
+} */
+.hide_overflow{
+  overflow-x: hidden;
+}
+.a_remove{
+  text-decoration: none;
+  color: none;
+}
+.a_remove:hover{
+  text-decoration: none;
+  color: none;
+}
+.gua_flag{
+  height: 27.66vw;
+  width: 44.28vw;
+  background-image: url('/static/images/guatemala_flag.png');
+  background-size: 44.28vw;
+  border-top-right-radius: 3vw;
+  border-bottom-right-radius: 3vw;
+  border-top: 0.4vw solid #4898D1;
+  border-bottom: 0.4vw solid #4898D1;
+}
+.opportunidades-summary{
+  position: relative;
+  margin: auto;
+  width: 50vw;
+}
+.orga{
+  text-decoration: none;
+  color: #4ea24a;
+  font-size:2vw;
+}
+.orga:hover{
+  text-decoration: none;
+  color: #045c2c;
+}
+.org-img{
+  margin-bottom: 2vw;
+  width: 5vw;
+  border-radius: 1vw;
+  border:0.2vw solid #4ea24a;
+}
+.org-title{
+}
+.opp_model-container{
+  margin-left: 2vw;
+  width: 60vw;
+}
+.opp_model-image-container{
+  width: 8vw;
+}
+.opp_model-image{
+  margin-left: 1.5vw;
+  height: 4vw;
+  width: 4vw;
+  border-radius: 1vw;
+  border: 0.2vw solid #212529;
+  background-size: 5vw;
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: height 0.5s, width 0.5s, background-image 1s;
+}
+.opp_model-title{
+  color: #212529;
+  width: 15vw;
+  font-size: 2vw;
+  font-weight: bold;
+  transition: font-size 0.5s;
+}
+.opp_model-description{
+  font-size: 1.2vw;
+  color: #212529;
+  width: 34vw;
+  transition: font-size 0.5s;
+}
+hr{
+  width: 90%;
+}

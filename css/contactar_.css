@@ -1,0 +1,28 @@
+/* .worked{
+  color: red;
+} */
+.main-contact{
+  margin: auto;
+  margin-top: 1%;
+  height: 25vw;
+  width: 50vw;
+  background-color: rgb(150, 202, 291);
+  border-radius: 2vw;
+  border: 0.5vw solid rgb(71, 152, 241);
+}
+.general-contact-info{
+  padding-left: 2%;
+  width: 43%
+}
+.general-contact_row{
+  height: 100%;
+}
+.secondary-contact{
+  margin: auto;
+  margin-top: 1%;
+  height: 20vw;
+  width: 30vw;
+  background-color: rgb(150, 202, 291);
+  border-radius: 2vw;
+  border: 0.5vw solid rgb(71, 152, 241);
+}

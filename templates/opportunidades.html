@@ -1,0 +1,392 @@
+{% extends 'homePage.html' %}
+{% load static from staticfiles %}
+{% block addTitle %}
+Opportunidades
+{% endblock %}
+{% block addCss %}
+<link rel="stylesheet" href="{% static 'css/opportunidades_j.css' %}">
+{% endblock %}
+{% block addContent %}
+<!-- <h1 class="helo">Hello</h1> -->
+<!-- {% for i in opportunidades_model %}
+<h1>{{ i.image }}</h1>
+<img src='/media/{{ i.image }}' alt="">
+{% endfor %} -->
+<div class="general-title">Oportunidades</div>
+<div class="push_down"></div>
+<div class="row">
+  <div style="width: 30%">
+    <img style="position: relative;width: 90%;left: 30%;" src="{% static 'images/WF.jpg' %}">
+  </div>
+  <div style="width: 70%">
+    <div style="font-size: 1.5vw" class="opportunidades-summary general-text">
+      &nbsp; &nbsp;<span style="font-size: 2.5vw;font-weight: bold">Las Oportunidades</span> están al alcance de la mano, el mundo interactivo virtual nos presenta una universo de formas alternativas para alcanzar un desarrollo bjo en emisiones. Existen ya compromisos establecidos por parte de gobiernos, empresas, organizaciones y ciudadanos responsables que nos demuestran su compromiso con el Planeta.<br>A continuación, incluímos vínculos de agencias, asociaciones, organizaciones y bancos internacionales que promueven “ventanas de oportunidades” para avanzar en la Acción Climática.
+    </div>
+  </div>
+</div>
+<div class="push_down-small"></div>
+<div class="general-title">Organizaciones</div>
+<div class="push_down-small"></div>
+<div style="margin-left: 0;" class="row">
+  <div style="width: 50%">
+    <a target="_blank" href="https://www.wri.org/" style="margin-left: 0;" class="orga row">
+      <div style="width: 10%"></div>
+      <div>
+        <img class="org-img" src="{% static 'images/WRI.png' %}">
+      </div>
+      <div style="width: 2%"></div>
+      <div class="org-title">World Resources Institute</div>
+    </a>
+    <a target="_blank" href="https://www.worldwildlife.org/" style="margin-left: 0;" class="orga row">
+      <div style="width: 10%"></div>
+      <div>
+        <img class="org-img" src="{% static 'images/WWF.png' %}">
+      </div>
+      <div style="width: 2%"></div>
+      <div class="org-title">World Wildlife Fund</div>
+    </a>
+    <a target="_blank" href="https://www.ndcinvest.org/" style="margin-left: 0;" class="orga row">
+      <div style="width: 10%"></div>
+      <div>
+        <img class="org-img" src="{% static 'images/NDCI.PNG' %}">
+      </div>
+      <div style="width: 2%"></div>
+      <div class="org-title">NDC Invest</div>
+    </a>
+    <a target="_blank" href="https://ndcpartnership.org/" style="margin-left: 0;" class="orga row">
+      <div style="width: 10%"></div>
+      <div>
+        <img class="org-img" src="{% static 'images/NDCP.jpg' %}">
+      </div>
+      <div style="width: 2%"></div>
+      <div class="org-title">NDC Partnership</div>
+    </a>
+    <a target="_blank" href="https://www.greenclimate.fund/home" style="margin-left: 0;" class="orga row">
+      <div style="width: 10%"></div>
+      <div>
+        <img class="org-img" src="{% static 'images/GCF.png' %}">
+      </div>
+      <div style="width: 2%"></div>
+      <div class="org-title">Green Climate Fund</div>
+    </a>
+    <a target="_blank" href="https://www.c40.org/" style="margin-left: 0;" class="orga row">
+      <div style="width: 10%"></div>
+      <div>
+        <img class="org-img" src="{% static 'images/C40C.png' %}">
+      </div>
+      <div style="width: 2%"></div>
+      <div class="org-title">C40 Cities</div>
+    </a>
+  </div>
+  <div style="width: 50%">
+    <a target="_blank" href="http://www.undp.org/content/undp/es/home.html" style="margin-left: 0;" class="orga row">
+      <div style="width: 10%"></div>
+      <div>
+        <img class="org-img" src="{% static 'images/PNUD.png' %}">
+      </div>
+      <div style="width: 2%"></div>
+      <div class="org-title">UN Development Programme</div>
+    </a>
+    <a target="_blank" href="https://www.unenvironment.org/" style="margin-left: 0;" class="orga row">
+      <div style="width: 10%"></div>
+      <div>
+        <img class="org-img" src="{% static 'images/UNE.png' %}">
+      </div>
+      <div style="width: 2%"></div>
+      <div class="org-title">UN Environment</div>
+    </a>
+    <a target="_blank" href="http://www.globalenvironmentfund.com/" style="margin-left: 0;" class="orga row">
+      <div style="width: 10%"></div>
+      <div>
+        <img class="org-img" src="{% static 'images/contactos/GEF.jpg' %}">
+      </div>
+      <div style="width: 2%"></div>
+      <div class="org-title">Global Environmental Fund</div>
+    </a>
+    <a target="_blank" href="https://www.bancomundial.org/" style="margin-left: 0;" class="orga row">
+      <div style="width: 10%"></div>
+      <div>
+        <img class="org-img" src="{% static 'images/BM.jpg' %}">
+      </div>
+      <div style="width: 2%"></div>
+      <div class="org-title">Banco Mundial</div>
+    </a>
+    <a target="_blank" href="https://www.iadb.org/es" style="margin-left: 0;" class="orga row">
+      <div style="width: 10%"></div>
+      <div>
+        <img class="org-img" src="{% static 'images/BID.jpg' %}">
+      </div>
+      <div style="width: 2%"></div>
+      <div class="org-title">Banco Interamericano de Desarrollo</div>
+    </a>
+  </div>
+</div>
+
+
+<div class="push_down"></div>
+      <div class="tabs-container">
+        <div class="row">
+          <div class="tab">
+            <div style="height:5vw;overflow-y: hidden;overflow-x:hidden;" class="general-title">Eco-Turismo</div>
+            <div>
+              <div style="margin-left: 5%;" class="row row-adj propuesta-btn">
+                  <div style="margin-left: 2vw"></div>
+                  <div class="propuesta-arrow"></div>
+                  <div class="propuesta-text">Propuesta</div>
+              </div>
+              <div class="propuesta-container">
+                <div style="height: 3vw;"></div>
+                <div class="row row-adj">
+                  <div style="margin-left: 5vw;">
+                    <div style="margin-left: 0vw;" class="row">
+                      <div style="width: 40%;">
+                        <img style="margin-left:15%;width: 10vw;" src="{% static 'images/ad.png' %}">
+                      </div>
+                      <div style="font-size: 1.5vw; width: 50%"><strong>Los invitamos a participar:</strong><br> Nos gustaría escuchar su voz, envíen sus ideas de propuestas/proyectos de acción climática por esta vía.</div>
+                    </div>
+                    <hr>
+                    <form id="subscribe-form" onsubmit="
+                alert('Gracias por la Propuesta.');" method="post">
+                      {% csrf_token %}
+                      <div class="row row-adj">
+                        <div class="support-label">Nombre:&nbsp; </div>
+                        {{ propuestaForm.namePropuesta }}
+                      </div>
+                      <div class="row row-adj">
+                        <div class="support-label">Correo Electrónico:&nbsp; </div>
+                        {{ propuestaForm.emailPropuesta }}
+                      </div>   
+                      <div class="row row-adj">
+                        <div class="support-label">Compania/Organización:&nbsp; </div>
+                        {{ propuestaForm.organizacion }}
+                      </div> 
+                      <div class="row row-adj">
+                        <div class="support-label">Propuesta:&nbsp; </div>
+                        {{ propuestaForm.propuesta }}
+                      </div>       
+                      <button id="support-submit" type="submit">Enviar</button>
+                      <div style="height: 3vw"></div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+              {% for i in opportunidades_model %}
+                {% if i.category == "Turistas" or i.category == "Todos" %}
+                <a class="a_remove" href='{{ i.link }}'>
+                  <div class="opp_model-container">
+                    <div class="row hide_overflow">
+                      <div class="opp_model-image-container">
+                        <div class="opp_model-image" style="background-image:url('/media/{{ i.image }}')"></div>
+                      </div>
+                      <div class="opp_model-title">{{ i.title }}</div>
+                      <div class="opp_model-description">{{ i.description }}</div>
+                    </div>
+                  </div>
+                </a>
+                <hr>
+                {% endif %}
+              {% endfor %}
+          </div>
+          <div class="tab">
+            <div style="height:5vw;overflow-y: hidden;overflow-x:hidden;" class="general-title">Carreras Ambientales</div>
+            <div>
+              <div style="margin-left: 5%;" class="row row-adj propuesta-btn">
+                  <div style="margin-left: 2vw"></div>
+                  <div class="propuesta-arrow"></div>
+                  <div class="propuesta-text">Propuesta</div>
+              </div>
+              <div class="propuesta-container">
+                <div style="height: 3vw;"></div>
+                <div class="row row-adj">
+                  <div style="width: 5vw;"></div>
+                  <div style="margin-left: 5vw;">
+                    <div style="margin-left: 0vw;" class="row">
+                      <div style="width: 40%;">
+                        <img style="margin-left:15%;width: 10vw;" src="{% static 'images/ad.png' %}">
+                      </div>
+                      <div style="font-size: 1.5vw; width: 50%"><strong>Los invitamos a participar:</strong><br> Nos gustaría escuchar su voz, envíen sus ideas de propuestas/proyectos de acción climática por esta vía.</div>
+                    </div>
+                    <hr>
+                    <form id="subscribe-form" onsubmit="
+                alert('Gracias por la Propuesta.');" method="post">
+                      {% csrf_token %}
+                      <div class="row row-adj">
+                        <div class="support-label">Nombre:&nbsp; </div>
+                        {{ propuestaForm.namePropuesta }}
+                      </div>
+                      <div class="row row-adj">
+                        <div class="support-label">Correo Electrónico:&nbsp; </div>
+                        {{ propuestaForm.emailPropuesta }}
+                      </div>   
+                      <div class="row row-adj">
+                        <div class="support-label">Compania/Organización:&nbsp; </div>
+                        {{ propuestaForm.organizacion }}
+                      </div> 
+                      <div class="row row-adj">
+                        <div class="support-label">Propuesta:&nbsp; </div>
+                        {{ propuestaForm.propuesta }}
+                      </div>       
+                      <button id="support-submit" type="submit">Enviar</button>
+                      <div style="height: 3vw"></div>
+                    </form>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <hr>
+              {% for i in opportunidades_model %}
+                {% if i.category == "Estudiantes" or i.category == "Todos" %}
+                <a class="a_remove" href='{{ i.link }}'>
+                  <div class="opp_model-container">
+                    <div class="row">
+                      <div class="opp_model-image-container">
+                        <div class="opp_model-image" style="background-image:url('/media/{{ i.image }}')"></div>
+                      </div>
+                      <div class="opp_model-title">{{ i.title }}</div>
+                      <div class="opp_model-description">{{ i.description }}</div>
+                    </div>
+                  </div>
+                </a>
+                <hr>
+                {% endif %}
+              {% endfor %}
+          </div>
+          <div class="tab">
+            <div style="height:5vw;overflow-y: hidden;overflow-x:hidden;" class="general-title">Econom&iacute;as Bajos en Carbono</div>
+            <div>
+              <div style="margin-left: 5%;" class="row row-adj propuesta-btn">
+                  <div style="margin-left: 2vw"></div>
+                  <div class="propuesta-arrow"></div>
+                  <div class="propuesta-text">Propuesta</div>
+              </div>
+              <div class="propuesta-container">
+                <div style="height: 3vw;"></div>
+                <div class="row row-adj">
+                  <div style="width: 5vw;"></div>
+                  <div style="margin-left: 5vw;">
+                    <div style="margin-left: 0vw;" class="row">
+                      <div style="width: 40%;">
+                        <img style="margin-left:15%;width: 10vw;" src="{% static 'images/ad.png' %}">
+                      </div>
+                      <div style="font-size: 1.5vw; width: 50%"><strong>Los invitamos a participar:</strong><br> Nos gustaría escuchar su voz, envíen sus ideas de propuestas/proyectos de acción climática por esta vía.</div>
+                    </div>
+                    <hr>
+                    <form id="subscribe-form" onsubmit="
+                alert('Gracias por la Propuesta.');" method="post">
+                      {% csrf_token %}
+                      <div class="row row-adj">
+                        <div class="support-label">Nombre:&nbsp; </div>
+                        {{ propuestaForm.namePropuesta }}
+                      </div>
+                      <div class="row row-adj">
+                        <div class="support-label">Correo Electrónico:&nbsp; </div>
+                        {{ propuestaForm.emailPropuesta }}
+                      </div>   
+                      <div class="row row-adj">
+                        <div class="support-label">Compania/Organización:&nbsp; </div>
+                        {{ propuestaForm.organizacion }}
+                      </div> 
+                      <div class="row row-adj">
+                        <div class="support-label">Propuesta:&nbsp; </div>
+                        {{ propuestaForm.propuesta }}
+                      </div>       
+                      <button id="support-submit" type="submit">Enviar</button>
+                      <div style="height: 3vw"></div>
+                    </form>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <hr>
+              {% for i in opportunidades_model %}
+                {% if i.category == "Companias" or i.category == "Todos" %}
+                <a class="a_remove" href='{{ i.link }}'>
+                  <div class="opp_model-container">
+                    <div class="row hide_overflow">
+                      <div class="opp_model-image-container">
+                        <div class="opp_model-image" style="background-image:url('/media/{{ i.image }}')"></div>
+                      </div>
+                      <div class="opp_model-title">{{ i.title }}</div>
+                      <div class="opp_model-description">{{ i.description }}</div>
+                    </div>
+                  </div>
+                </a>
+                <hr>
+                {% endif %}
+              {% endfor %}
+          </div>
+          <div class="tab">
+            <div style="height:5vw;overflow-y: hidden;overflow-x:hidden;" class="general-title">Experiencias Locales</div>
+            <div>
+              <div style="margin-left: 5%;" class="row row-adj propuesta-btn">
+                  <div style="margin-left: 2vw"></div>
+                  <div class="propuesta-arrow"></div>
+                  <div class="propuesta-text">Propuesta</div>
+              </div>
+              <div class="propuesta-container">
+                <div style="height: 3vw;"></div>
+                <div class="row row-adj">
+                  <div style="width: 5vw;"></div>
+                  <div style="margin-left: 5vw;">
+                    <div style="margin-left: 0vw;" class="row">
+                      <div style="width: 40%;">
+                        <img style="margin-left:15%;width: 10vw;" src="{% static 'images/ad.png' %}">
+                      </div>
+                      <div style="font-size: 1.5vw; width: 50%"><strong>Los invitamos a participar:</strong><br> Nos gustaría escuchar su voz, envíen sus ideas de propuestas/proyectos de acción climática por esta vía.</div>
+                    </div>
+                    <hr>
+                    <form id="subscribe-form" onsubmit="
+                alert('Gracias por la Propuesta.');" method="post">
+                      {% csrf_token %}
+                      <div class="row row-adj">
+                        <div class="support-label">Nombre:&nbsp; </div>
+                        {{ propuestaForm.namePropuesta }}
+                      </div>
+                      <div class="row row-adj">
+                        <div class="support-label">Correo Electrónico:&nbsp; </div>
+                        {{ propuestaForm.emailPropuesta }}
+                      </div>   
+                      <div class="row row-adj">
+                        <div class="support-label">Compania/Organización:&nbsp; </div>
+                        {{ propuestaForm.organizacion }}
+                      </div> 
+                      <div class="row row-adj">
+                        <div class="support-label">Propuesta:&nbsp; </div>
+                        {{ propuestaForm.propuesta }}
+                      </div>       
+                      <button id="support-submit" type="submit">Enviar</button>
+                      <div style="height: 3vw"></div>
+                    </form>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <hr>
+              {% for i in opportunidades_model %}
+                {% if i.category == "Locales" or i.category == "Todos" %}
+                <a class="a_remove" href='{{ i.link }}'>
+                  <div class="opp_model-container">
+                    <div class="row hide_overflow">
+                      <div class="opp_model-image-container">
+                        <div class="opp_model-image" style="background-image:url('/media/{{ i.image }}')"></div>
+                      </div>
+                      <div class="opp_model-title">{{ i.title }}</div>
+                      <div class="opp_model-description">{{ i.description }}</div>
+                    </div>
+                  </div>
+                </a>
+                <hr>
+                {% endif %}
+              {% endfor %}
+          </div>
+        </div>
+      </div>
+{% endblock %}
+{% block addScript %}
+<script src="{% static 'js/opportunidades_d.js' %}" type="text/javascript"></script>
+{% endblock %}

@@ -1,0 +1,312 @@
+{% extends 'homePage.html' %}
+{% load static from staticfiles %}
+{% block addTitle %}
+LibroInteractivo
+{% endblock %}
+{% block addContent %}
+{% block addCss %}
+<link rel="stylesheet" href="{% static 'css/libroInt_aa.css' %}">
+{% endblock %}
+<div id="load">
+  <div class="row row_adj">
+    <div class="loading">DESCARGANDO...</div>
+    <div style="animation: hovering 4s linear 2.5s infinite;" class="loading">DESCARGANDO...</div>
+  </div>
+</div>
+<div id="main">
+  <div class="row row_libroInt_adj">
+    <div class="page-container">
+      <div class="push_down-small"></div>
+      <div class="effecto-invernadero" >
+        <div class="push_down-small"></div>
+        <div id="effecto-invernadero" class="general-title">¿Qu&eacute; significa “Effecto Invernadero Y el Calentamiento Global”?</div>
+        <div class="push_down-small"></div>
+        <iframe class="video" src="https://www.youtube.com/embed/YLFLxQ0t07A"></iframe>
+        <div class="push_down-small"></div>
+      </div>
+      <div class="body-text">
+        <p>&nbsp; &nbsp; El Efecto Invernadero es el responsable de mantener al planeta tierra con la temperatura necesaria para la vida. La energ&iacute;a que proviene del sol en forma de luz (rayos solares) llega a la tierra y hace que nuestro planeta se caliente. Luego la tierra devuelve esta energ&iacute;a al espacio en forma de calor, sin embargo una parte de este calor es capturado por los Gases de Efecto Invernadero (GEI) como el vapor de agua, el di&oacute;xido de carbono CO2, y el metano que se encuentran en la atm&oacute;sfera, lo que evita que el calor salga de nuevo al espacio y mantiene una temperatura adecuada en el planeta.</p>
+        <p>Desde mediados del siglo XX, se ha observado un aumento en la temperatura del planeta. Este aumento de la temperatura de la tierra es denominado Calentamiento Global. El Grupo Intergubernamental de Expertos de cambio clim&aacute;tico (IPCC, por sus siglas en ingl&eacute;s) afirma con un 95% de seguridad que el calentamiento global es causado por el aumento de los gases responsables del efecto invernadero por actividades humanas.</p>
+        <img style="width:100%" src="{% static 'images/temp.jpg' %}" alt="">
+        <p>Las principales actividades humanas que han contribuido al aumento de las emisiones de gases de efecto invernadero a la atmosfera han sido el transporte, la industria, la producci&oacute;n de energ&iacute;a el&eacute;ctrica, la construcci&oacute;n, la agricultura, los cambios en el uso de la tierra, la desertificaci&oacute;n y los incendios forestales.<br />La imagen muestra c&oacute;mo aument&oacute; la temperatura del planeta desde el a&ntilde;o 1901 (antes de la era industrial) hasta el a&ntilde;o 2012.</p>
+      </div>
+      <div class="push_down-small"></div>
+      <div id="temperatura-futuro" class="general-title" style="width:80%;margin-left:10%">¿Qu&eacute; Pasar&aacute; con la Temperatura del Planeta del Fururo?</div>
+      <div class="push_down-small"></div>
+      <img style="width:80%;height:30vw;margin-left:10%" src="{% static 'images/temp-futuro.PNG' %}" alt="">
+      <div class="body-text">
+        <p>&nbsp; &nbsp; El IPCC tras varios a&ntilde;os de estudios y an&aacute;lisis ha publicado dos estimaciones para las cuales tomaron de base la temperatura media que tuvimos en la tierra desde 1986 a 2005 (20 a&ntilde;os) y en la cual se compara con la temperatura media que tendremos desde 2081 a 2100 (20 a&ntilde;os), en dos escenarios muy distintos.</p>
+        <p>El primer escenario, compara la temperatura base (1986-2005) con la temperatura que tendremos si logramos el objetivo del Acuerdo de Par&iacute;s. Y el segundo escenario, compara la temperatura base con la temperatura que tendremos si no realizamos acciones para combatir el calentamiento global y seguimos emitiendo gases de efecto invernadero como lo venimos haciendo hasta la fecha.</p>
+      </div>
+      <div style="position:relative" class="container">
+        <img style="z-index:1;position:relative;width:75%;height:25vw;left:12.5%;border-bottom-right-radius:2vw;border-bottom-left-radius:2vw;left:" src="{% static 'images/cambio-climatico.PNG' %}" alt="">
+        <div style="z-index:2;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width:100%" class="general-title" id="cambio-climatico">Qu&eacute; es el Cabio Clim&aacute;tico?</div>
+
+      </div>
+      <div class="push_down-small"></div>
+      <div class="body-text">
+        <p>&nbsp; &nbsp;El cambio clim&aacute;tico es la modificaci&oacute;n del clima en periodos largos de tiempo. La idea de cambio clim&aacute;tico, alude a una variaci&oacute;n del clima del planeta Tierra generada por la acci&oacute;n del ser humano. Este cambio clim&aacute;tico es producido por el proceso conocido como efecto invernadero, que provoca el llamado calentamiento global el cual afecta principalmente la temperatura de los oc&eacute;anos y el derretimiento de las masas de hielo en los polos de la tierra. El cambio clim&aacute;tico trae como consecuencia una serie de efectos negativos, principalmente el aumento de ondas de calor, sequ&iacute;as y aumentan la fuerza de los fen&oacute;menos hidrometeorol&oacute;gicos como huracanes, tormentas, etc.</p>
+        <p>Estos efectos han tenido impactos da&ntilde;inos principalmente en la salud y la calidad de vida de la poblaci&oacute;n, en los ecosistemas, en la econom&iacute;a y enla infraestructura. Aunque los efectos del cambio clim&aacute;tico son a escala mundial, todo apunta a que las &aacute;reas intertropicales resultan ser las m&aacute;s fr&aacute;giles y expuestas, y por ello lo sufrir&aacute;n con mayor intensidad. Como regiones m&aacute;s&nbsp; cr&iacute;ticas se se&ntilde;alan de forma especial el sur y sureste de Asia, ambas bandas tropicales africanas y un amplio espacio en Am&eacute;rica en el que se incluye por completo Centroam&eacute;rica. Los tr&oacute;picos resultan m&aacute;s vulnerables por razones geogr&aacute;fico-meteorol&oacute;gicas, pero tambi&eacute;n debido a factores econ&oacute;micos y de desarrollo como la pobreza y la inseguridad alimentaria.</p>
+      </div>
+      <div class="push_down-small"></div>
+      <div class="general-title" id="linea-de-tiempo">L&iacute;nea de Tiempo</div>
+      <div class="push_down-small"></div>
+      <div class="body-text">
+        <p>&nbsp; &nbsp; Para combatir el Cambio Clim&aacute;tico, naci&oacute; en 1992 la Convenci&oacute;n Marco de las Naciones Unidas sobre Cambio Clim&aacute;tico (CMNUCC) con el objetivo de lograr estabilizar las emisiones de gases de efecto invernadero a un nivel que impida interferencias humanas peligrosas en el sistema clim&aacute;tico, nivel que debe lograrse en un plazo suficiente para permitir que los ecosistemas&nbsp; se adapten naturalmente al cambio clim&aacute;tico, asegurar que la producci&oacute;n de alimentos no se vea amenazada y permitir que el desarrollo econ&oacute;mico contin&uacute;e de manera sostenible.</p>
+        <p>La CMNUCC entr&oacute; en vigencia el 21 de marzo de 1994, estableciendo la Conferencia de las Partes (COP) como una reuni&oacute;n celebrada anualmente entre todas las partes que ratificaron para la toma de decisiones y la elaboraci&oacute;n de tratados y acuerdos de car&aacute;cter mundial. Durante la 21a Conferencia de las Partes (COP21) de la CMNUCC, el 12 de diciembre del 2015, en Par&iacute;s, Francia, se adopt&oacute; el Acuerdo de Par&iacute;s, y entr&oacute; en vigor el 4 de noviembre de 2016. Guatemala firm&oacute; el Acuerdo de Par&iacute;s el22 de abril del 2016 y lo ratific&oacute; el 25 de enero de 2017.</p>
+      </div>
+      <div class="push_down-small"></div>
+      <div class="row row_adj">
+        <img style="margin-top:2vw;margin-left:20%;width:20%;height: 6vw;" src="{% static 'images/CdlT.jpg' %}" alt="">
+        <div style="width:50%" class="">
+          <div class="med_text">1992</div>
+          <hr>
+          <div class="body-text">
+            <p>&nbsp; &nbsp; Se celebra la segunda Cumbre de la Tierra en Río de Janeiro, Brasil, y se adopta la CMNUCC.</p>
+          </div>
+        </div>
+      </div>
+      <div class="push_down-small"></div>
+      <div class="row row_adj">
+        <img style="margin-top:2vw;margin-left:20%;width:20%;height: 15vw;" src="{% static 'images/UNCCCM.jpg' %}" alt="">
+        <div style="width:50%" class="">
+          <div class="med_text">1994</div>
+          <hr>
+          <div class="body-text">
+            <p>&nbsp; &nbsp; La CMNUCC entró en vigor el 21 de marzo de 1994. Guatemala ratificó en agosto de 1995.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row row_adj">
+        <img style="margin-top:2vw;margin-left:20%;width:20%;height:7vw" src="{% static 'images/cop3.gif' %}" alt="">
+        <div style="width:50%" class="">
+          <div class="med_text">1997</div>
+          <hr>
+          <div class="body-text">
+            <p>&nbsp; &nbsp; En la COP3 en Kioto, Jap&oacute;n, se adopt&oacute; el Protocolo de Kioto (PK), que ten&iacute;a el objetivo que los pa&iacute;ses desarrollados, disminuyeran su emisi&oacute;n de GEI en un 5% con base a sus emisiones de 1990. Este protocolo entr&oacute; en vigencia en 2005.</p>
+          </div>
+        </div>
+      </div>
+      <div class="push_down-small"></div>
+      <div class="row row_adj">
+        <img style="margin-left:25%;width:15%;height:15vw" src="{% static 'images/cop17.jpg' %}" alt="">
+        <div style="width:50%" class="">
+          <div class="med_text">2011</div>
+          <hr>
+          <div class="body-text">
+            <p>&nbsp; &nbsp;En la COP17 en Durban, Sud &Aacute;frica, se acord&oacute; el segundo periodo del PK por 8 a&ntilde;os adicionales y se cre&oacute; un nuevo grupo de trabajo en un intento de elaborar un nuevo acuerdo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="push_down-small"></div>
+      <div class="row row_adj">
+        <img style="margin-top:3vw;margin-left:20%;width:20%;height:10vw" src="{% static 'images/COP18.jpg' %}" alt="">
+        <div style="width:50%" class="">
+          <div class="med_text">2012</div>
+          <hr>
+          <div class="body-text">
+            <p>&nbsp; &nbsp;En la COP18 en Doha, Qatar, se adopt&oacute; la Enmienda de Doha, que daba un nuevo per&iacute;odo de acci&oacute;n al PK por 8 a&ntilde;os m&aacute;s, aumentar la ambici&oacute;n de reducci&oacute;n de emisiones en 18% con respecto al nivel de 1990 y agrega a los Gases de Efecto Invernadero el Trifluoruro de Nitr&oacute;geno.</p>
+          </div>
+        </div>
+      </div>
+      <div class="push_down-small"></div>
+      <div class="row row_adj">
+        <img style="margin-left:25%;width:15%;height:15vw" src="{% static 'images/cop19logo ofi.png' %}" alt="">
+        <div style="width:50%" class="">
+          <div class="med_text">2013</div>
+          <hr>
+          <div class="body-text">
+            <p>&nbsp; &nbsp; En la COP19 en Varsovia, Polonia, se introduce que todas las partes desarrollar&aacute;n sus Contribuciones Previstas Determinadas a Nivel Nacional (CPDNN) y el mecanismo de Varsovia sobre P&eacute;rdidas y Da&ntilde;os.</p>
+          </div>
+        </div>
+      </div>
+      <div class="push_down-small"></div>
+      <div class="row row_adj">
+        <img style="margin-left:30%;width:10%;height:15vw" src="{% static 'images/CoP 21 LOGO.png' %}" alt="">
+        <div style="width:50%" class="">
+          <div class="med_text">2015</div>
+          <hr>
+          <div class="body-text">
+            <p>&nbsp; &nbsp; En la COP21 en Par&iacute;s Francia, se adopta por consenso el Acuerdo de Par&iacute;s.</p>
+          </div>
+        </div>
+      </div>
+      <div class="push_down-small"></div>
+      <hr>
+      <div class="push_down-small"></div>
+      <div class="row row_adj">
+        <a href="{% url 'libroInt' %}" class="left-container" style="width: 20%;margin-left: 5%;">
+          <div class="left">
+            <div class="row row_adj">
+              <div class="arrow-left-container">
+                <div class="arrow-left"></div>
+              </div>
+              <span>1</span> 
+            </div>
+          </div>
+        </a>
+        <div style="width: 50%"></div>
+        <a href="{% url 'libroIntThree' %}" class="right-container" style="width: 20%;margin-right: 5%;">
+          <div class="right">
+            <div class="row row_adj">
+              <span style="width: 65%;text-align: right;color: white">3</span>
+              <div class="arrow-right-container">
+                <div class="arrow-right"></div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="push_down-small"></div>
+    </div>
+
+
+
+
+
+
+    <div class="index-container">
+      <div class="general-title">
+        Indice
+      </div>
+      <a class="deny_a" href="{% url 'libroInt' %}">
+        <div style="background-color:#D6BEB0" class="section pgElse">
+          <div style="text-align:center" class="med-text">Introduccion</div>
+          <!-- <a class="deny_a" href="#apuesta"> -->
+            <div class="index-item-dis">
+              Una Apuesta Global
+            </div>
+          <!-- </a> -->
+          <!-- <a class="deny_a" href="#carta_rita"> -->
+            <div class="index-item-dis">
+              Carta de la Embajadora Rita Mishaan
+            </div>
+          <!-- </a> -->
+          <!-- <a class="deny_a" href="#momentos"> -->
+            <div class="index-item-dis">
+              Momentos Hist&oacute;ricos
+            </div>
+          <!-- </a> -->
+        </div>
+      </a>
+      <!-- <a class="deny_a" href="{% url 'libroIntTwo' %}"> -->
+        <div style="background-color:#D6BEB0;margin-top: 1vw;padding-top: 0.5vw; border: 0.3vw solid #b69e90;" class="section">
+          <a  class="deny_a" href="#effecto-invernadero">
+            <div class="index-item">
+              Que es el Effecto Invernadero?
+            </div>
+          </a>
+          <a class="deny_a" href="#temperatura-futuro">
+            <div class="index-item">
+              La Temperatura del planeta del futuro
+            </div>
+          </a>
+          <a class="deny_a" href="#cambio-climatico">
+            <div class="index-item">
+              Que es el Cambio Clim&aacute;tico?
+            </div>
+          </a>
+          <a class="deny_a" href="#linea-de-tiempo  ">
+            <div class="index-item">
+              Linea de Tiempo
+            </div>
+          </a>
+        </div>
+      <!-- </a> -->
+      <div class="push_down-small"></div>
+      <a class="deny_a" href="{% url 'libroIntThree' %}">
+        <div style="background-color:#98CABD;margin-top: 1vw;padding-top: 0.5vw;" class="section pgElse">
+          <div style="text-align:center" class="med-text">Acuerdo de Paris en Resumen</div>
+          <!-- <a class="deny_a" href="#preambulo"> -->
+            <div class="index-item-dis">
+              Pre&aacute;mbulo
+            </div>
+          <!-- </a> -->
+          <!-- <a class="deny_a" href="#objetivo"> -->
+            <div class="index-item-dis">
+              Objetivo
+            </div>
+          <!-- </a> -->
+          <!-- <a class="deny_a" href="#pilares"> -->
+            <div class="index-item-dis">
+              Pilares
+            </div>
+          <!-- </a> -->
+          <!-- <a class="deny_a" href="#mitigacion"> -->
+            <div class="index-item-dis">
+              Mitigaci&oacute;n
+            </div>
+          <!-- </a> -->
+          <!-- <a class="deny_a" href="#energia"> -->
+            <div class="sub-index-item-dis">
+              Energ&iacute;a
+            </div>
+          <!-- </a> -->
+          <!-- <a class="deny_a" href="#bosques"> -->
+            <div class="sub-index-item-dis">
+              Bosques USCUSS
+            </div>
+          <!-- </a> -->
+          <!-- <a class="deny_a" href="#agricultura"> -->
+            <div class="sub-index-item-dis">
+              Agricultura
+            </div>
+          <!-- </a> -->
+          <!-- <a class="deny_a" href="#residuos"> -->
+            <div class="sub-index-item-dis">
+              Residuos
+            </div>
+          <!-- </a> -->
+          <!-- <a class="deny_a" href="#proInd"> -->
+            <div class="sub-index-item-dis">
+              Processos Industriales
+            </div>
+          <!-- </a> -->
+        </div>
+      </a>
+      <a class="deny_a" href="{% url 'libroIntFour' %}">
+        <div style="background-color:#98CABD;margin-top: 1vw;padding-top: 0.5vw;" class="section pgElse">
+          <!-- <a class="deny_a" href="#adaptacion"> -->
+            <div class="index-item-dis">
+              Adaptaci&oacute;n
+            </div>
+          <!-- </a> -->
+          <!-- <a class="deny_a" href="#financiamiento"> -->
+            <div class="index-item-dis">
+              Financiamiento
+            </div>
+          <!-- </a> -->
+        </div>
+      </a>
+      <a class="deny_a" href="{% url 'libroIntFive' %}">
+      <div style="background-color:#98CABD;margin-top: 1vw;padding-top: 0.5vw;" class="section pgElse">
+        <!-- <a class="deny_a" href="#edbe"> -->
+          <div class="index-item-dis">
+            Estrategias de Desarrollo Bajo Emissiones
+          </div>
+        <!-- </a> -->
+        <!-- <a class="deny_a" href="#educacion"> -->
+          <div class="index-item-dis">
+            Educaci&oacute;n, Sensibilizaci&oacute;n y Participaci&oacute;n del Publico
+          </div>
+        <!-- </a> -->
+        <!-- <a class="deny_a" href="#locales"> -->
+          <div class="index-item-dis">
+            Plataforma para Communidades Locales
+          </div>
+        <!-- </a> -->
+        <!-- <a class="deny_a" href="#ruta"> -->
+          <div class="index-item-dis">
+            Ruta Cr&iacute;tica
+          </div>
+        <!-- </a> -->
+      </div>
+      </a>
+      <div style="height: 10vw;"> </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block addScript %}
+<script src="{% static 'js/libroInt_ab.js' %}" type="text/javascript"></script>
+{% endblock %}

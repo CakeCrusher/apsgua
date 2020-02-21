@@ -1,0 +1,40 @@
+{% extends 'homePage.html' %}
+{% load static from staticfiles%}
+{% block addTitle %}
+  DESIGUAL
+{% endblock %}
+{% block addContent %}
+<div style="margin-left: 0vw; margin-top: 2vw;" class="row general-title">
+	<div style="margin-left: auto">
+		<img style="width: 4vw; margin-right: 1vw;" src="{% static 'images/DESIGUAL.PNG' %}">
+	</div>
+	<div style="margin-right: auto;">DESIGUAL</div>
+</div>
+<hr>
+<div style="margin-left: 0vw" class="row">
+	<div style="width: 30%">
+		<img style="border-radius: 2vw;border:0.5vw solid #212529;width: 80%; margin-left: 10%" src="{% static 'images/rita_prof.PNG' %}">
+		<img style="position: relative; width: 7vw; background-color: white; border-radius: 10vw; border:0.5vw solid #212529; left: 22vw; top: -29vw;" src="{% static 'images/DESIGUAL.PNG' %}">
+	</div>
+	<div style="width: 70%">
+		<div style="margin-left: 0vw; font-size: 3vw" class="row">
+			<div style="font-weight: bold">Directora:</div>
+			<div>&nbsp; &nbsp;Rita Mishaan</div>
+		</div>
+		<div style="margin-left: 0vw; font-size: 3vw" class="row">
+			<div style="font-weight: bold">Contribuci&oacute;n:</div>
+			<div>&nbsp; &nbsp;Lider del proyecto</div>
+		</div>
+		<hr>
+		<div style="margin-left: 0vw; font-size: 3vw" class="row">
+			<div style="font-weight: bold">Teléfono:</div>
+			<div>&nbsp; &nbsp;502-5017-5971</div>
+		</div>
+		<div style="margin-left: 0vw; font-size: 3vw" class="row">
+			<div style="font-weight: bold">Correo electrónico:</div>&nbsp; &nbsp;
+			<a href="mailto:ritamishaan@gmail.com?subject=DESIGUAL(APSGua)">ritamishaan@gmail.com</a>
+		</div>
+		
+	</div>
+</div>
+{% endblock%}

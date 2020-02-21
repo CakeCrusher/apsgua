@@ -1,0 +1,287 @@
+/* .hello{
+  color: red;
+} */
+#show{
+  /*display: none;*/
+}
+.deny_a{
+  text-decoration: none;
+  color: #212529;
+}
+.left-container:hover{
+  text-decoration: none;
+  transform: translateX(-5%);
+  transition: transform 0.3s;
+}
+.left{
+  color: white;
+  font-size: 3vw;
+  background-color: #4ea24a;
+  border-radius: 1vw;
+}
+.left:hover{
+  background-color: #045c2c;
+  transition: background-color 0.3s;
+}
+.arrow-left{
+  height: 5vw;
+  width: 5vw;
+  border-right:1vw solid white;
+  border-top:1vw solid white;
+  transform: rotateZ(225deg);
+}
+.arrow-left-container{
+  transform: translateX(1.5vw) translateY(0vw);
+}
+.right-container:hover{
+  text-decoration: none;
+  transform: translateX(5%);
+  transition: transform 0.3s;
+}
+.right{
+  text-align: right;
+  color: white;
+  font-size: 3vw;
+  background-color: #4ea24a;
+  border-radius: 1vw;
+}
+.right:hover{
+  background-color: #045c2c;
+  transition: background-color 0.3s;
+}
+.arrow-right{
+  height: 5vw;
+  width: 5vw;
+  border-right:1vw solid white;
+  border-top:1vw solid white;
+  transform: rotateZ(45deg);
+}
+.arrow-right-container{
+  transform: translateX(-1.5vw) translateY(0vw);
+}
+.deny_a:hover{
+  text-decoration: none;
+  color: #212529;
+}
+.row_libroInt_adj{
+  position: relative;
+  width: 99.99%;
+  left: 0.85%;
+}
+.row_adj{
+  margin-left: 0%;
+  width: 100%;
+}
+.page-container{
+  position:fixed;
+  right: 20%;
+  right:0;
+  height: 91%;
+  overflow-y: scroll;
+  width: 80%;
+}
+.index-container{
+  position:fixed;
+  
+  overflow-y: scroll;
+  height: 100%;
+  background-color: rgb(235,235,235);
+  width: 20%;
+}
+.index-item{
+  text-decoration: none;
+  color: rgb(33, 37, 41);
+  border-radius: 0.5vw;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  width: 90%;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  margin-left: 0.6vw;
+  background-color: rgb(225,225,225);
+}
+.pgElse:hover{
+  cursor: pointer;
+  border:0.3vw solid #D7CD5C;
+  transition: border-width 0.1s;
+}
+.index-item-dis{
+  text-decoration: none;
+  color: rgb(33, 37, 41);
+  border-radius: 0.5vw;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  width: 90%;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  margin-left: 0.6vw;
+  background-color: rgb(225,225,225);
+}
+.sub-index-item{
+  text-decoration: none;
+  color: rgb(33, 37, 41);
+  border-radius: 0.5vw;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  width: 80%;
+  margin-left: 16%;
+  margin-right: 1vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  background-color: rgb(225,225,225);
+}
+.sub-index-item-dis{
+  text-decoration: none;
+  color: rgb(33, 37, 41);
+  border-radius: 0.5vw;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  width: 80%;
+  margin-left: 16%;
+  margin-right: 1vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  background-color: rgb(225,225,225);
+}
+.index-item:hover,.sub-index-item:hover{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  background-color: rgb(205,205,205);
+}
+.body-text{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.med-text{
+  font-size: 2vw;
+  text-align: center;
+}
+.text_info{
+  font-weight: bold;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  height: 0;
+  color: rgb(78, 162, 74);
+}
+.text_info:hover{
+  color: rgb(4, 92, 44);
+  cursor: cell;
+}
+.text_info:focus{
+  outline: none;
+}
+.med_text{
+  text-align: center;
+  font-size: 2vw;
+  font-weight: bold;
+  text-align: center;
+}
+.video{
+  border:0.2vw solid #212529;
+  margin-left:25%;
+  width: 50%;
+  height: 400px;
+}
+.popover{
+  max-width: none;
+  width: 30vw;
+}
+
+
+
+
+
+.puntos-container{
+  width: 30%;
+  margin: 1vw;
+  border: 0.5vw solid black;
+}
+.carta_rita{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(230,255,230);
+}
+.carta_rita_header{
+  width: 100%;
+  margin-bottom: 3vw;
+}
+.rita_header_text{
+  width: 60%;
+  height: 100%;
+}
+.rita_img{
+  background-image: url('/static/images/rita_prof.PNG');
+  background-repeat: no-repeat;
+  height: 20vw;
+  width: 22vw;
+  background-size: 20vw;
+  border: 1vw solid rgb(79, 188, 82);
+  border-bottom-right-radius: 3vw;
+}
+.carta_rita_label{
+  color: white;
+  background-color: rgb(79, 188, 82);
+  border-bottom-right-radius: 3vw;
+  height: 10%;
+  width: 100%;
+}
+.effecto-invernadero{
+  width: 100%;
+}
+.section{
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  padding-bottom: 0.5vw;
+  border-radius: 1vw;
+}
+.pilares{
+  font-size: 1.2vw;
+  width: 30%;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  border-radius: 2vw;
+}
+.sectores{
+  width: 20%;
+  /* margin-left: 1%; */
+  /* margin-right: 1%; */
+  /* border-radius: 0.5vw; */
+  border:1vw solid black;
+  height: 18vw;
+}
+.cosas{
+  margin: auto;
+  height: 27vw;
+  width: 27vw;
+  border-radius: 14vw;
+  background-position: center;
+  background-size: 22.5vw;
+  background-repeat: no-repeat;
+  border: 1vw solid black;
+}
+.ruta{
+  background-image: url('/static/images/fabric.PNG');
+  background-position: center;
+  width: 94%;
+  margin-top: 1vw;
+  margin-bottom: 2vw;
+  margin-left: 3%;
+  margin-right: 3%;
+  border-radius: 1vw;
+  height: 13.5vw;
+}
+.critica{
+  background-color: white;
+  width: 94%;
+  margin-left: 3%;
+  margin-right: 3%;
+  border-radius: 1vw;
+}
+/*.add-shadow{
+  text-shadow:-3px -3px 0 #212529, 3px -3px 0 #212529,-3px 3px 0 #212529,3px 3px 0 #212529;
+}*/
